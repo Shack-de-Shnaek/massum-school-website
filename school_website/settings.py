@@ -10,33 +10,41 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import os
 from pathlib import Path
+from django.utils.translation import gettext_lazy as _
+import environ
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*)b8cb3pc3vi+fm)06#y*yf6wz^#xb#h+305rl#ox0%dj6i5%n'
+SECRET_KEY = 'uIPBkaux>qxQ5""vhl^YM[8b=8lOa4cA_I1ErA<Pqd8y%H]ygEDPvGGcutBskJt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.get_value('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -74,10 +82,7 @@ WSGI_APPLICATION = 'school_website.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': env.db_url()
 }
 
 
@@ -103,11 +108,21 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
+LANGUAGES = [
+    ('mk', _('Македонски')),
+    ('en', _('Англиски')),
+    ('sq', _('Албански'))
+]
 
 USE_I18N = True
+
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'mk'
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locales')
+]
+
+TIME_ZONE = 'UTC'
 
 USE_TZ = True
 

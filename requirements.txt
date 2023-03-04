@@ -1,0 +1,4 @@
+Django==4.1.7
+django-modeltranslation==0.18.9
+python-environ==0.4.54
+Pillow==9.4.0
