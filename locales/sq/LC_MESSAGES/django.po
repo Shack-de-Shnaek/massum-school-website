@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-04 20:38+0000\n"
+"POT-Creation-Date: 2023-03-09 18:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -142,14 +142,58 @@ msgstr "Mesazhi"
 msgid "Пораки"
 msgstr "Mesazhet"
 
-#: school_website/settings.py:112
+#: school_website/settings.py:118
 msgid "Македонски"
 msgstr "Maqedonisht"
 
-#: school_website/settings.py:113
+#: school_website/settings.py:119
 msgid "Англиски"
 msgstr "Anglisht"
 
-#: school_website/settings.py:114
+#: school_website/settings.py:120
 msgid "Албански"
 msgstr "Shqiptar"
+
+#: templates/layout/navbar.html:5
+msgid "СОСУ Илинден"
+msgstr "SOSU Ilinden"
+
+#: templates/layout/navbar.html:14
+msgid "Новости"
+msgstr "Lajme"
+
+#: templates/layout/navbar.html:17
+msgid "Настава"
+msgstr "Kurrikula"
+
+#: templates/layout/navbar.html:20
+msgid "Прилози"
+msgstr "Dokumentet"
+
+#: templates/layout/navbar.html:34
+msgid "Информации за ученици"
+msgstr "Informacion për studentët"
+
+#: templates/layout/navbar.html:37
+msgid "Матура"
+msgstr "Diplomimi"
+
+#: templates/layout/navbar.html:40
+msgid "Вонредни ученици"
+msgstr "Studentë të jashtëzakonshëm"
+
+#: templates/layout/navbar.html:43
+msgid "Распоред на часови"
+msgstr "Orari i shkollës"
+
+#: templates/layout/navbar.html:49
+msgid "Кодекс на однесување"
+msgstr "Kodi i Sjelljes"
+
+#: templates/layout/navbar.html:54
+msgid "За нас"
+msgstr "Për NE"
+
+#: templates/layout/navbar.html:57
+msgid "Контакт"
+msgstr "Kontaktoni"

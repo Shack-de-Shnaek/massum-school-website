@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-04 20:38+0000\n"
+"POT-Creation-Date: 2023-03-09 18:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: main/models.py:5 main/models.py:49 main/models.py:75
 msgid "Наслов"
 msgstr "Title"
@@ -141,14 +142,58 @@ msgstr "Message"
 msgid "Пораки"
 msgstr "Messages"
 
-#: school_website/settings.py:112
+#: school_website/settings.py:118
 msgid "Македонски"
 msgstr "Macedonian"
 
-#: school_website/settings.py:113
+#: school_website/settings.py:119
 msgid "Англиски"
 msgstr "English"
 
-#: school_website/settings.py:114
+#: school_website/settings.py:120
 msgid "Албански"
 msgstr "Albanian"
+
+#: templates/layout/navbar.html:5
+msgid "СОСУ Илинден"
+msgstr "SOSU Ilinden"
+
+#: templates/layout/navbar.html:14
+msgid "Новости"
+msgstr "News"
+
+#: templates/layout/navbar.html:17
+msgid "Настава"
+msgstr "Curriculum"
+
+#: templates/layout/navbar.html:20
+msgid "Прилози"
+msgstr "Documents"
+
+#: templates/layout/navbar.html:34
+msgid "Информации за ученици"
+msgstr "Information for students"
+
+#: templates/layout/navbar.html:37
+msgid "Матура"
+msgstr "Matura"
+
+#: templates/layout/navbar.html:40
+msgid "Вонредни ученици"
+msgstr "Part-time studnets"
+
+#: templates/layout/navbar.html:43
+msgid "Распоред на часови"
+msgstr "Class schedule"
+
+#: templates/layout/navbar.html:49
+msgid "Кодекс на однесување"
+msgstr "Code of conduct"
+
+#: templates/layout/navbar.html:54
+msgid "За нас"
+msgstr "About us"
+
+#: templates/layout/navbar.html:57
+msgid "Контакт"
+msgstr "Contact"
