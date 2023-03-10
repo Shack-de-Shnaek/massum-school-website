@@ -1,3 +1,43 @@
 :root {
     font-size: 16px;
+    --primary-green: #30885C;
+    --light-green: #4ABF85;
+    --yellow: #FFCC33;
+}
+
+nav {
+    height: 4rem;
+}
+
+nav > div {
+    min-height: 4rem;
+}
+
+.navbar-collapse.show {
+    top: 4rem;
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+}
+
+.nav-item a {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+main {
+    margin-top: 4rem;
+}
+
+.bg-primary-green {
+    background-color: var(--primary-green);
+}
+
+.bg-light-green {
+    background-color: var(--light-green);
+}
+
+.bg-yellow {
+    background-color: var(--yellow);
 }

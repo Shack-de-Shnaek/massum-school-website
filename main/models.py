@@ -21,7 +21,7 @@ class ArticleImage(models.Model):
 
 class Slider(models.Model):
     position = models.CharField(max_length=50, blank=False, null=False, verbose_name=_('Позиција'))
-    position_slug = models.SlugField(max_length=50, blank=False, null=False, verbose_name=_('Позиција слаг'))
+    position_slug = models.SlugField(max_length=50, blank=False, null=False, unique=True, verbose_name=_('Позиција слаг'))
 
     class Meta:
         verbose_name = _('Слајдер')
@@ -38,7 +38,7 @@ class SliderImage(models.Model):
     
 class GalleryCategory(models.Model):
     name = models.CharField(max_length=50, blank=False, null=False, verbose_name=_('Име'))
-    name_slug = models.SlugField(max_length=50, blank=False, null=False, verbose_name=_('Име слаг'))
+    name_slug = models.SlugField(max_length=50, blank=False, null=False, unique=True, verbose_name=_('Име слаг'))
 
     class Meta:
         verbose_name = _('Категорија за галерија')

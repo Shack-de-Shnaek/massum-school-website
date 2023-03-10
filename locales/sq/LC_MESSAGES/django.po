@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-09 18:08+0000\n"
+"POT-Creation-Date: 2023-03-10 07:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,7 +38,7 @@ msgstr "Artikulli"
 msgid "Објави"
 msgstr "Artikuj"
 
-#: main/models.py:16 main/models.py:33 main/models.py:50
+#: main/models.py:16 main/models.py:33 main/models.py:50 templates/index.html:5
 msgid "Слика"
 msgstr "Imazhi"
 
@@ -167,22 +167,26 @@ msgid "Настава"
 msgstr "Kurrikula"
 
 #: templates/layout/navbar.html:20
+msgid "Галерија"
+msgstr "Galeri"
+
+#: templates/layout/navbar.html:23
 msgid "Прилози"
 msgstr "Dokumentet"
 
-#: templates/layout/navbar.html:34
+#: templates/layout/navbar.html:37
 msgid "Информации за ученици"
 msgstr "Informacion për studentët"
 
-#: templates/layout/navbar.html:37
+#: templates/layout/navbar.html:40
 msgid "Матура"
 msgstr "Diplomimi"
 
-#: templates/layout/navbar.html:40
+#: templates/layout/navbar.html:43
 msgid "Вонредни ученици"
 msgstr "Studentë të jashtëzakonshëm"
 
-#: templates/layout/navbar.html:43
+#: templates/layout/navbar.html:46
 msgid "Распоред на часови"
 msgstr "Orari i shkollës"
 
