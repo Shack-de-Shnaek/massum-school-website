@@ -1,8 +1,54 @@
 {% extends "layout/base.html" %}
 {% load i18n %}
+{% load static %}
 
 {% block content %}
-    <h1>Od ovde pocnuvajte so praenje stranici</h1>
-    <h2>ako sakate nekoj teskt da se preveduva, pisete go vo translate tag, vaka</h2>
-    <p>{% translate 'Слика' %}</p>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+    <div id="main-carousel" class="carousel slide carousel-fade w-100" data-bs-ride="carousel">
+        <div class="carousel-inner w-100 h-100">
+            {% for image in slider.images.all %}
+                <div class="carousel-item h-100 {% if forloop.first %}active{% endif %}">
+                    <img src="{% static image %}" alt="{{ image.name }}" class="d-block m-0 w-100 h-100 object-fit-cover">
+                    {% if image.text %}
+                    <div class="carousel-caption d-none d-sm-block px-5 bg-secondary bg-opacity-75">
+                        <h2 class="opacity-100 m-0 text-dark">{{ image.text }}</h2>
+                    </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="carousel-indicators">
+            {% for image in slider.images.all %}
+                <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active"{% endif %}></button>
+            {% endfor %}
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#main-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#main-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <section class="bg-body">
+        <h1 class="section-header">{% translate 'Новости' %}</h1>
+        <div class="container-fluid">
+            {% for article in articles %}
+                <div class="card text-left">
+                    {% if article.images.count > 0 %}
+                        <h3>images</h3>
+                    {% endif %}
+                    <div class="card-body">
+                        <h4 class="card-title">{{ article.title }}</h4>
+                        <p class="card-text">{{ article.content }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
 {% endblock %}

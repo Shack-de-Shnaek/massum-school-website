@@ -13,6 +13,7 @@ class ArticleAdmin(ModelAdmin):
 
 class SliderImageInline(TabularInline):
     model = SliderImage
+    fields = ('order', 'image', 'text_mk', 'text_en', 'text_sq', )
 
 @admin.register(Slider)
 class SliderAdmin(ModelAdmin):

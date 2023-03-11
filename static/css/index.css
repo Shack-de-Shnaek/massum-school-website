@@ -1,0 +1,17 @@
+#main-carousel {
+    height: calc(100vh - 4rem);
+}
+
+.carousel-caption {
+    width: fit-content !important;
+    right: 0 !important;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 992px) {
+    #main-carousel {
+        min-height: 25vh;
+        height: 40vw;
+    }
+}

@@ -28,6 +28,7 @@ nav > div {
 
 main {
     margin-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .bg-primary-green {
@@ -40,4 +41,25 @@ main {
 
 .bg-yellow {
     background-color: var(--yellow);
+}
+
+.section-header {
+    padding: 0.5rem;
+    background: var(--light-green);
+    text-align: center;
+}
+
+.nav-brand-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 992px) {
+    nav > .container-fluid {
+        width: 100%;
+    }
+
+    .nav-brand-container {
+        width: 100%;
+    }   
 }

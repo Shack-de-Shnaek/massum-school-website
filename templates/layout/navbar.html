@@ -1,16 +1,16 @@
 {% load i18n %}
 
-<nav class="navbar navbar-expand-lg position-fixed vw-100 top-0 left-0 p-0 navbar-dark bg-primary-green">
+<nav class="navbar navbar-expand-lg z-3 position-fixed w-100 top-0 left-0 p-0 navbar-dark bg-primary-green">
     <div class="container-fluid p-0">
-        <div class="px-2">
+        <div class="nav-brand-container px-2 d-flex align-items-center justify-content-between">
             <a href="{% url 'index' %}" class="navbar-brand">{% translate 'СОСУ Илинден' %}</a>
-
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        
+            <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-        </div>    
+        </div>
 
-        <div class="collapse navbar-collapse w-100 bg-primary-green" id="navbarCollapse">
+        <div class="collapse navbar-collapse w-100 px-2 bg-primary-green" id="navbarCollapse">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a href="" class="nav-link">{% translate 'Новости' %}</a>
