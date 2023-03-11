@@ -18,7 +18,8 @@ nav > div {
 }
 
 .navbar-brand {
-    font-size: 1.25rem;
+    font-size: 1.5rem!important;
+    font-weight: bold;
 }
 
 .nav-item a {
@@ -26,21 +27,52 @@ nav > div {
     font-weight: bold;
 }
 
+.dropdown-shadow {
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.23);
+}
+
+ul hr {
+  width: 90%;
+  margin: 0 auto;               
+  background: color #30885c;
+  border-bottom: 1px solid #30885C;
+}
 main {
     margin-top: 4rem;
     padding-bottom: 4rem;
 }
 
 .bg-primary-green {
-    background-color: var(--primary-green);
+    background-color: var(--primary-green)!important;
 }
 
 .bg-light-green {
-    background-color: var(--light-green);
+    background-color: var(--light-green)!important;
 }
 
 .bg-yellow {
-    background-color: var(--yellow);
+    background-color: var(--yellow) !important;
+}
+
+.section-header {
+    padding: 0.5rem;
+    background: var(--light-green);
+    text-align: center;
+}
+
+.nav-brand-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 992px) {
+    nav > .container-fluid {
+        width: 100%;
+    }
+
+    .nav-brand-container {
+        width: 100%;
+    }   
 }
 
 .section-header {
