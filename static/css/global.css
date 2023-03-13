@@ -5,6 +5,10 @@
     --yellow: #FFCC33;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 nav {
     height: 4rem;
 }
@@ -94,4 +98,21 @@ main {
     .nav-brand-container {
         width: 100%;
     }   
+}
+
+.article-card .card-title {
+    transition: 0.2s;
+}
+
+.article-card:hover .card-title {
+    color: var(--yellow);
+}
+
+.article-carousel .carousel-caption {
+    bottom: 2rem !important;
+}
+
+.article-carousel img {
+    height: 20% !important;
+    max-height: 20rem;
 }

@@ -5,15 +5,15 @@ from main.models import Article, ArticleImage, Slider, SliderImage, GalleryCateg
 
 class ArticleImageInline(TabularInline):
     model = ArticleImage
+    fields = ('image', 'title_mk', 'title_en', 'title_sq', )
 
 @admin.register(Article)
 class ArticleAdmin(ModelAdmin):
     inlines = (ArticleImageInline, )
 
-
 class SliderImageInline(TabularInline):
     model = SliderImage
-    fields = ('order', 'image', 'text_mk', 'text_en', 'text_sq', )
+    fields = ('order', 'image', 'title_mk', 'title_en', 'title_sq', )
 
 @admin.register(Slider)
 class SliderAdmin(ModelAdmin):

@@ -1,0 +1,40 @@
+<a href="/articles/{{article.id}}" class="text-dark">
+    <div class="article-card card text-left rounded-0 p-2">
+        {% if article.images.count > 0 %}
+            <div id="article-{{article.id}}-carousel" class="article-carousel carousel slide carousel-fade w-100" data-bs-ride="carousel">
+                <div class="carousel-inner w-100 h-100">
+                    {% for image in article.images.all %}
+                        <div class="carousel-item w-100 {% if forloop.first %}active{% endif %}">
+                            <img src="/media/{{image.image}}" alt="{{image.name}}" class="d-block m-0 mx-auto object-fit-cover ratio-16x9">
+                            {% if image.title %}
+                            <div class="carousel-caption d-none d-sm-block p-1 bg-secondary bg-opacity-75">
+                                <p class="opacity-100 m-0 text-dark">{{ image.title }}</p>
+                            </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+        
+                <div class="carousel-indicators">
+                    {% for image in article.images.all %}
+                        <button type="button" data-bs-target="#article-{{article.id}}-carousel" data-bs-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active"{% endif %}></button>
+                    {% endfor %}
+                </div>
+        
+                <button class="carousel-control-prev" type="button" data-bs-target="#article-{{article.id}}-carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#article-{{article.id}}-carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        {% endif %}
+        <div class="card-body">
+            <h4 class="card-title">{{ article.title }}</h4>
+            <h6 class="card-subtitle fw-normal mb-2">{{ article.created_at|date:"d.m.Y" }}</h6>
+            <p class="card-text">{{ article.content }}</p>
+        </div>
+    </div>
+</a>

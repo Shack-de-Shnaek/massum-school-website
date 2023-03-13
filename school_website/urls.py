@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls.i18n import i18n_patterns
+from django.conf.urls.static import static
+
+from . import settings
 
 from main import views
 
@@ -25,4 +28,8 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path('', views.index, name='index'),
+    path('articles/', views.article_list, name='article-list'),
+    path('articles/<int:article_id>', views.article, name='article'),
 )
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

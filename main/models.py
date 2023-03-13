@@ -17,8 +17,24 @@ class Article(models.Model):
 class ArticleImage(models.Model):
     article = models.ForeignKey(Article, blank=False, null=False, on_delete=models.CASCADE, related_name='images', verbose_name=_('Објава'))
     image = models.ImageField(blank=False, null=False, verbose_name=_('Слика'))
- 
+    title = models.CharField(max_length=100, blank=True, null=True, verbose_name=_('Текст'))
+
     def __str__(self):
+        if self.title: return self.title
+        return self.image.name
+
+    class Meta:
+        verbose_name = _('Слика за објава')
+        verbose_name_plural = _('Слики за објава')
+
+class ArticleImage(models.Model):
+    article = models.ForeignKey(Article, blank=False, null=False, on_delete=models.CASCADE, related_name='images', verbose_name=_('Слајдер'))
+    order = models.IntegerField(blank=False, null=False, default=1, verbose_name=_('Редослед'))
+    image = models.ImageField(blank=False, null=False, verbose_name=_('Слика'))
+    title = models.CharField(max_length=100, blank=True, null=True, verbose_name=_('Текст'))
+
+    def __str__(self):
+        if self.title: return self.title
         return self.image.name
 
     class Meta:
@@ -40,9 +56,10 @@ class SliderImage(models.Model):
     slider = models.ForeignKey(Slider, blank=False, null=False, on_delete=models.CASCADE, related_name='images', verbose_name=_('Слајдер'))
     order = models.IntegerField(blank=False, null=False, default=1, verbose_name=_('Редослед'))
     image = models.ImageField(blank=False, null=False, verbose_name=_('Слика'))
-    text = models.CharField(max_length=100, blank=True, null=True, verbose_name=_('Текст'))
+    title = models.CharField(max_length=100, blank=True, null=True, verbose_name=_('Текст'))
 
     def __str__(self):
+        if self.title: return self.title
         return self.image.name
 
     class Meta:
@@ -62,10 +79,11 @@ class GalleryCategory(models.Model):
 
 class GalleryImage(models.Model):
     category = models.ForeignKey(GalleryCategory, blank=False, null=False, on_delete=models.RESTRICT, related_name='images', verbose_name=_('Категорија'))
-    title = models.CharField(max_length=50, blank=False, null=False, verbose_name=_('Наслов'))
     image = models.ImageField(blank=False, null=False, verbose_name=_('Слика'))
+    title = models.CharField(max_length=50, blank=True, null=True, verbose_name=_('Наслов'))
 
     def __str__(self):
+        if self.title: return self.title
         return self.image.name
 
     class Meta:

@@ -1,0 +1,10 @@
+{% extends 'layout/base.html' %}
+
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+    <h1>{{article.title}}</h1>
+    
+    {% include 'article_card.html' %}
+{% endblock %}

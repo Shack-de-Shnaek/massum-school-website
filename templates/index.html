@@ -9,10 +9,10 @@
         <div class="carousel-inner w-100 h-100">
             {% for image in slider.images.all %}
                 <div class="carousel-item h-100 {% if forloop.first %}active{% endif %}">
-                    <img src="{% static image %}" alt="{{ image.name }}" class="d-block m-0 w-100 h-100 object-fit-cover">
-                    {% if image.text %}
+                    <img src="/media/{{image.image}}" alt="{{ image.name }}" class="d-block m-0 w-100 h-100 object-fit-cover">
+                    {% if image.title %}
                     <div class="carousel-caption d-none d-sm-block px-5 bg-secondary bg-opacity-75">
-                        <h2 class="opacity-100 m-0 text-dark">{{ image.text }}</h2>
+                        <h2 class="opacity-100 m-0 text-dark">{{ image.title }}</h2>
                     </div>
                     {% endif %}
                 </div>
@@ -36,19 +36,17 @@
     </div>
 
     <section class="bg-body">
-        <h1 class="section-header">{% translate 'Новости' %}</h1>
-        <div class="container-fluid">
+        <h1 class="section-header text-light">{% translate 'Новости' %}</h1>
+        <div class="container-fluid row m-0 g-3">
             {% for article in articles %}
-                <div class="card text-left">
-                    {% if article.images.count > 0 %}
-                        <h3>images</h3>
-                    {% endif %}
-                    <div class="card-body">
-                        <h4 class="card-title">{{ article.title }}</h4>
-                        <p class="card-text">{{ article.content }}</p>
-                    </div>
+                <div class="col-12 col-xl-4">
+                    {% include 'article_card.html' %}
                 </div>
             {% endfor %}
         </div>
+    </section>
+
+    <section>
+
     </section>
 {% endblock %}

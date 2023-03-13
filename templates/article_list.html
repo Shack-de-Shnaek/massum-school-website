@@ -1,0 +1,10 @@
+{% extends 'layout/base.html' %}
+
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+    {% for article in articles %}
+        {% include 'article_card.html' %}
+    {% endfor %}
+{% endblock %}
