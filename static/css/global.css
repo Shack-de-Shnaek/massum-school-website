@@ -100,6 +100,23 @@ main {
     }   
 }
 
+.language-dropdown.show {
+    max-width: fit-content;
+}
+
+.language-btn {
+    background: inherit;
+    outline: none;
+}
+
+.language-dropdown input {
+    margin: 0;
+}
+
+.article-card {
+    max-width: 60rem;
+}
+
 .article-card .card-title {
     transition: 0.2s;
 }
@@ -113,6 +130,7 @@ main {
 }
 
 .article-carousel img {
-    height: 20% !important;
+    /* height: 20% !important; */
     max-height: 20rem;
+    width: 100%;
 }

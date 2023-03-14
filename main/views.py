@@ -2,6 +2,8 @@ from datetime import datetime
 
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpRequest, HttpResponse, HttpResponseBadRequest
+from django.db.models import Q
+from django.utils.translation import get_language
 
 from main.models import Slider, Article
 
@@ -15,16 +17,21 @@ def index(request: HttpRequest):
     })
 
 def article_list(request: HttpRequest):
-    year = None
-    month = None
-    
+    article_filter = {}
+    text_filter = ''
     try:
-        if 'year' in request.GET: year = int(request.GET.get('year'))
-        if 'month' in request.GET: month = int(request.GET.get('month'))
-    except:
-        return HttpResponseBadRequest()
+        if request.GET.get('time', None):
+            split_time = request.GET.get('time').split('-')
+            article_filter['created_at__month'] = int(split_time[1])
+            article_filter['created_at__year'] = int(split_time[0])
 
-    articles = Article.objects.all()
+    except (ValueError, TypeError, IndexError):
+        return HttpResponseBadRequest()
+    
+    if request.GET.get('search', None): 
+        text_filter = request.GET.get('search')
+
+    articles = Article.objects.filter(Q(content__icontains=text_filter) | Q(title__icontains=text_filter), **article_filter)
 
     return render(request, 'article_list.html', {
         'articles': articles
