@@ -132,5 +132,39 @@ main {
 .article-carousel img {
     /* height: 20% !important; */
     max-height: 20rem;
-    width: 100%;
+}
+
+footer {
+    height: 20rem;
+    padding-top: 20px;
+}
+
+footer a {
+    transition: 0.2s;
+}
+
+footer a:hover {
+    color: var(--yellow) !important;
+}
+
+footer .icon {
+    width: 25px;
+    height: 25px;
+    background-color: var(--bs-light);
+    border-radius: 50%;
+    
+}
+
+.ilinden-logo {
+    color:#4ABF85;
+    font-size: 35px;
+}
+
+.sosu-logo {
+    font-size: 35px;
+    color: var(--yellow);
+}
+
+.ilinden-highlight {
+    color: #4ABF85;
 }

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-10 07:51+0000\n"
+"POT-Creation-Date: 2023-03-15 17:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: main/models.py:5 main/models.py:49 main/models.py:75
+#: main/models.py:5 main/models.py:83 main/models.py:118
 msgid "Наслов"
 msgstr "Titulli"
 
-#: main/models.py:6 main/models.py:76
+#: main/models.py:6 main/models.py:119
 msgid "Содржина"
 msgstr "Përmbajtja"
 
@@ -30,174 +30,222 @@ msgstr "Përmbajtja"
 msgid "Креирано на"
 msgstr "Krijuar në"
 
-#: main/models.py:11 main/models.py:15
+#: main/models.py:14 main/models.py:18
 msgid "Објава"
 msgstr "Artikulli"
 
-#: main/models.py:12
+#: main/models.py:15
 msgid "Објави"
 msgstr "Artikuj"
 
-#: main/models.py:16 main/models.py:33 main/models.py:50 templates/index.html:5
+#: main/models.py:19 main/models.py:33 main/models.py:58 main/models.py:82
 msgid "Слика"
 msgstr "Imazhi"
 
-#: main/models.py:19
+#: main/models.py:20 main/models.py:34 main/models.py:59
+#: templates/article_list.html:18
+msgid "Текст"
+msgstr "Teksti"
+
+#: main/models.py:27 main/models.py:41
 msgid "Слика за објава"
 msgstr "Imazhi i artikullit"
 
-#: main/models.py:20
+#: main/models.py:28 main/models.py:42
 msgid "Слики за објава"
 msgstr "Imazhet e artikujve"
 
-#: main/models.py:23
-msgid "Позиција"
-msgstr "Pozicioni"
-
-#: main/models.py:24
-msgid "Позиција слаг"
-msgstr "Pozicioni i slug"
-
-#: main/models.py:27 main/models.py:31
+#: main/models.py:31 main/models.py:52 main/models.py:56
 msgid "Слајдер"
 msgstr "Rrëshqitës"
 
-#: main/models.py:28
-msgid "Слајдери"
-msgstr "Rrëshqitës"
-
-#: main/models.py:32
+#: main/models.py:32 main/models.py:57
 msgid "Редослед"
 msgstr "Rendit"
 
-#: main/models.py:36
+#: main/models.py:45
+msgid "Позиција"
+msgstr "Pozicioni"
+
+#: main/models.py:46
+msgid "Позиција слаг"
+msgstr "Pozicioni i slug"
+
+#: main/models.py:53
+msgid "Слајдери"
+msgstr "Rrëshqitës"
+
+#: main/models.py:66
 msgid "Слика за слајдер"
 msgstr "Imazhi rrëshqitës"
 
-#: main/models.py:37
+#: main/models.py:67
 msgid "Слики за слајдер"
 msgstr "Imazhet me rrëshqitje"
 
-#: main/models.py:40 main/models.py:65
+#: main/models.py:70 main/models.py:105
 msgid "Име"
 msgstr "Emri"
 
-#: main/models.py:41
+#: main/models.py:71
 msgid "Име слаг"
 msgstr "Emri slug"
 
-#: main/models.py:44
+#: main/models.py:77
 msgid "Категорија за галерија"
 msgstr "Kategoria e galerisë"
 
-#: main/models.py:45
+#: main/models.py:78
 msgid "Категории за галерија"
 msgstr "Kategoritë e galerisë"
 
-#: main/models.py:48
+#: main/models.py:81
 msgid "Категорија"
 msgstr "Kategoria"
 
-#: main/models.py:53
+#: main/models.py:90
 msgid "Слика за галерија"
 msgstr "Imazhi i galerisë"
 
-#: main/models.py:54
+#: main/models.py:91
 msgid "Слики за галерија"
 msgstr "Imazhet e galerisë"
 
-#: main/models.py:57 main/models.py:62
+#: main/models.py:94 main/models.py:102
 msgid "Вработен"
 msgstr "Punonjës"
 
-#: main/models.py:58
+#: main/models.py:95
 msgid "Титула"
 msgstr "Titulli"
 
-#: main/models.py:59 main/models.py:74
+#: main/models.py:96 main/models.py:117
 msgid "Емаил"
 msgstr "Email"
 
-#: main/models.py:63 main/models.py:66
+#: main/models.py:103 main/models.py:106
 msgid "Вработени"
 msgstr "Punonjësit"
 
-#: main/models.py:69
+#: main/models.py:112
 msgid "Предмет"
 msgstr "Subjekti"
 
-#: main/models.py:70
+#: main/models.py:113
 msgid "Предмети"
 msgstr "Lëndët"
 
-#: main/models.py:73
+#: main/models.py:116
 msgid "Име и презиме"
 msgstr "Emri dhe mbiemri"
 
-#: main/models.py:81
+#: main/models.py:127
 msgid "Порака"
 msgstr "Mesazhi"
 
-#: main/models.py:82
+#: main/models.py:128
 msgid "Пораки"
 msgstr "Mesazhet"
 
-#: school_website/settings.py:118
+#: school_website/settings.py:119
 msgid "Македонски"
 msgstr "Maqedonisht"
 
-#: school_website/settings.py:119
+#: school_website/settings.py:120
 msgid "Англиски"
 msgstr "Anglisht"
 
-#: school_website/settings.py:120
+#: school_website/settings.py:121
 msgid "Албански"
 msgstr "Shqiptar"
 
-#: templates/layout/navbar.html:5
-msgid "СОСУ Илинден"
-msgstr "SOSU Ilinden"
-
-#: templates/layout/navbar.html:14
+#: templates/article_list.html:7 templates/index.html:39
+#: templates/layout/footer.html:14 templates/layout/navbar.html:16
 msgid "Новости"
 msgstr "Lajme"
 
-#: templates/layout/navbar.html:17
-msgid "Настава"
-msgstr "Kurrikula"
+#: templates/article_list.html:14
+msgid "Месец"
+msgstr ""
 
-#: templates/layout/navbar.html:20
+#: templates/article_list.html:21
+msgid "Барај"
+msgstr "Muaj"
+
+#: templates/article_list.html:22
+msgid "Ресетирај"
+msgstr "Rivendos"
+
+#: templates/layout/footer.html:6 templates/layout/footer.html:37
+msgid "СОСУ"
+msgstr "SOSU"
+
+#: templates/layout/footer.html:7 templates/layout/footer.html:37
+msgid "„ИЛИНДЕН“"
+msgstr "\"ILINDEN\""
+
+#: templates/layout/footer.html:11
+msgid "Почетна"
+msgstr "Shtëpi"
+
+#: templates/layout/footer.html:12 templates/layout/footer.html:36
+msgid "За Нас"
+msgstr "Rreth Nesh"
+
+#: templates/layout/footer.html:13 templates/layout/navbar.html:64
+msgid "Контакт"
+msgstr "Kontaktoni"
+
+#: templates/layout/footer.html:37
+msgid ""
+" го гледаме како современо, европско училиште полно со професионализам, "
+"креативност и сигурен развој кон најелитните училишта за оспособување на "
+"кадар од електротехничка струка."
+msgstr ""
+" Është një shkollë që ne e shohim si një shkollë moderne, evropiane të mbushur me profesionalizëm. "
+" kreativiteti, duke u zhvilluar në një nga shkollat profesionale më elitare "
+" në fushën e inxhinierisë elektrike. "
+
+#: templates/layout/navbar.html:6
+msgid "СОСУ Илинден"
+msgstr "SOSU Ilinden"
+
+#: templates/layout/navbar.html:19
 msgid "Галерија"
 msgstr "Galeri"
 
-#: templates/layout/navbar.html:23
+#: templates/layout/navbar.html:22
 msgid "Прилози"
 msgstr "Dokumentet"
 
-#: templates/layout/navbar.html:37
+#: templates/layout/navbar.html:38
+msgid "Настава"
+msgstr "Kurrikula"
+
+#: templates/layout/navbar.html:41
 msgid "Информации за ученици"
 msgstr "Informacion për studentët"
 
-#: templates/layout/navbar.html:40
+#: templates/layout/navbar.html:44
 msgid "Матура"
 msgstr "Diplomimi"
 
-#: templates/layout/navbar.html:43
+#: templates/layout/navbar.html:48
 msgid "Вонредни ученици"
 msgstr "Studentë të jashtëzakonshëm"
 
-#: templates/layout/navbar.html:46
+#: templates/layout/navbar.html:52
 msgid "Распоред на часови"
 msgstr "Orari i shkollës"
 
-#: templates/layout/navbar.html:49
+#: templates/layout/navbar.html:56
 msgid "Кодекс на однесување"
 msgstr "Kodi i Sjelljes"
 
-#: templates/layout/navbar.html:54
+#: templates/layout/navbar.html:61
 msgid "За нас"
 msgstr "Për NE"
 
-#: templates/layout/navbar.html:57
-msgid "Контакт"
-msgstr "Kontaktoni"
+#: templates/layout/navbar.html:67
+msgid "Јазик"
+msgstr "Gjuhe"
