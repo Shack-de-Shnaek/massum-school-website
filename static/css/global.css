@@ -41,7 +41,9 @@ ul hr {
   background: color #30885c;
   border-bottom: 1px solid #30885C;
 }
+
 main {
+    min-height: calc(100vh - 24rem);
     margin-top: 4rem;
     padding-bottom: 4rem;
 }
@@ -167,4 +169,10 @@ footer .icon {
 
 .ilinden-highlight {
     color: #4ABF85;
+}
+
+@media screen and (max-width: 992px) {
+    footer {
+        height: fit-content;
+    }
 }

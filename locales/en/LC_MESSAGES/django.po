@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-15 17:43+0000\n"
+"POT-Creation-Date: 2023-03-15 22:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -159,7 +159,7 @@ msgstr "English"
 msgid "Албански"
 msgstr "Albanian"
 
-#: templates/article_list.html:7 templates/index.html:39
+#: templates/article_list.html:7 templates/index.html:41
 #: templates/layout/footer.html:14 templates/layout/navbar.html:16
 msgid "Новости"
 msgstr "News"
@@ -168,13 +168,31 @@ msgstr "News"
 msgid "Месец"
 msgstr "Month"
 
-#: templates/article_list.html:21
+#: templates/article_list.html:23
 msgid "Барај"
 msgstr "Search"
 
-#: templates/article_list.html:22
+#: templates/article_list.html:24
 msgid "Ресетирај"
 msgstr "Reset"
+
+#: templates/article_list.html:32
+msgid "Нема објави според Вашите критериуми"
+msgstr "There are no articles based on your criteria"
+
+#: templates/index.html:5
+msgid "СОСУ „ИЛИНДЕН“"
+msgstr "SOSU \"ILINDEN\""
+
+#: templates/index.html:54
+msgid ""
+"СОСУ „ИЛИНДЕН“ го гледаме како современо, европско училиште полно со "
+"професионализам, креативност и сигурен развој кон најелитните училишта за "
+"оспособување на кадар од електротехничка струка."
+msgstr ""
+"SOSU \"ILINDEN\" is a school we see as a modern, european school filled with "
+"professionalism,  creativity, developing into one of the most elite "
+"vocational schools  in the area of electrical engineering. "
 
 #: templates/layout/footer.html:6 templates/layout/footer.html:37
 msgid "СОСУ"
@@ -202,9 +220,9 @@ msgid ""
 "креативност и сигурен развој кон најелитните училишта за оспособување на "
 "кадар од електротехничка струка."
 msgstr ""
-" is a school we see as a modern, european school filled with professionalism, "
-" creativity, developing into one of the most elite vocational schools "
-" in the area of electrical engineering. "
+" is a school we see as a modern, european school filled with "
+"professionalism,  creativity, developing into one of the most elite "
+"vocational schools  in the area of electrical engineering. "
 
 #: templates/layout/navbar.html:6
 msgid "СОСУ Илинден"

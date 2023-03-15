@@ -13,22 +13,25 @@
                             {% endif %}
                         </div>
                     {% endfor %}
+                    
+                    {% if article.images.count > 1 %}
+                        <div class="carousel-indicators">
+                            {% for image in article.images.all %}
+                                <button type="button" data-bs-target="#article-{{article.id}}-carousel" data-bs-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active"{% endif %}></button>
+                            {% endfor %}
+                        </div>
+                
+                        <button class="carousel-control-prev" type="button" data-bs-target="#article-{{article.id}}-carousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#article-{{article.id}}-carousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    {% endif %}
                 </div>
         
-                <div class="carousel-indicators">
-                    {% for image in article.images.all %}
-                        <button type="button" data-bs-target="#article-{{article.id}}-carousel" data-bs-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active"{% endif %}></button>
-                    {% endfor %}
-                </div>
-        
-                <button class="carousel-control-prev" type="button" data-bs-target="#article-{{article.id}}-carousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#article-{{article.id}}-carousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         {% endif %}
         <div class="card-body">
