@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse w-100 px-2 bg-primary-green" id="navbarCollapse">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a href="{% url 'article_list' %}" class="nav-link px-2">{% translate 'Новости' %}</a>
+                    <a href="" class="nav-link px-2">{% translate 'Новости' %}</a>
                 </li>
                 <li class="nav-item">
                     <a href="" class="nav-link px-2">{% translate 'Галерија' %}</a>
@@ -62,34 +62,6 @@
                 </li>
                 <li class="nav-item">
                     <a href="" class="nav-link px-2">{% translate 'Контакт' %}</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">{% translate 'Јазик' %}</a>
-                    <ul class="dropdown-menu language-dropdown rounded-0 bg-light-green dropdown-shadow py-0">
-                        <li>
-                            <form method="post" action="{% url 'set_language' %}">
-                                {% csrf_token %}
-                                <input name="language" type="hidden" value="mk">
-                                <input class="language-btn border-0 nav-link" type="submit" value="MK">
-                            </form>
-                        </li>
-                        <hr />
-                        <li>
-                            <form method="post" action="{% url 'set_language' %}">
-                                {% csrf_token %}
-                                <input name="language" type="hidden" value="en">
-                                <input class="language-btn border-0 nav-link" type="submit" value="EN">
-                            </form>
-                        </li>
-                        <hr />
-                        <li>
-                            <form method="post" action="{% url 'set_language' %}">
-                                {% csrf_token %}
-                                <input name="language" type="hidden" value="sq">
-                                <input class="language-btn border-0 nav-link" type="submit" value="SQ">
-                            </form>
-                        </li>
-                    </ul>
                 </li>
             </ul>
         </div>    

@@ -100,23 +100,6 @@ main {
     }   
 }
 
-.language-dropdown.show {
-    max-width: fit-content;
-}
-
-.language-btn {
-    background: inherit;
-    outline: none;
-}
-
-.language-dropdown input {
-    margin: 0;
-}
-
-.article-card {
-    max-width: 60rem;
-}
-
 .article-card .card-title {
     transition: 0.2s;
 }
@@ -130,7 +113,84 @@ main {
 }
 
 .article-carousel img {
-    /* height: 20% !important; */
+    height: 20% !important;
     max-height: 20rem;
+}
+footer{
     width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    color: white;
+    background-color: black;
+    padding-top: 20px;
+}
+.footer_container1{
+    width: 20%;
+    height: 300px;
+    margin: 20pxs;
+}
+@media screen and (max-with:600px){
+    .footer_container{
+       width: 40%;
+    }
+    .footer_container1{
+        width: 40%;
+    }
+}
+.ilindenLogo {
+    color:#4ABF85;
+    font-size: 35px;
+}
+.sosuLogo {
+    font-size: 35px;
+    color: var(--yellow);
+}
+.container_left {
+    position: relative;
+    left: -12px;
+}
+.footer_nav {
+    color:white;
+    position: relative;
+    left: 50px;
+}
+.footer_nav:hover{
+    color:var(--yellow);
+    cursor: pointer;
+}
+.AboutUs {
+    max-width: 450px;
+    text-align:center;
+    color: darkgrey;
+}
+.About_Us{
+    position: relative;
+    left: 200px;
+    color: var(--yellow);
+}
+.ilindenn {
+    color: #4ABF85;
+}
+.icons {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 5px;
+    
+}
+.location {
+    color:wheat;
+    position: relative;
+    left: 10px;
+}
+.location:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}
+.About_Content {
+    display: flex;
+
 }

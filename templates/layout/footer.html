@@ -1,5 +1,34 @@
 {% load i18n %}
-
+{% load static %}
 <footer>
-    
+ <div class="footer_container">
+    <strong class="sosuLogo">{% translate 'СОСУ' %}</strong>
+ <strong class="ilindenLogo ">{% translate '„ИЛИНДЕН“' %}</strong> 
+  <div class="footer_container container_left">
+    <strong class="footer_nav">{% translate 'Почетна' %}</strong>
+    <strong class="footer_nav">{% translate 'За Нас' %}</strong>
+    <strong class="footer_nav">{% translate 'Контакт' %}</strong>
+    <strong class="footer_nav">{% translate 'Новости' %}</strong>
+  </div>
+
+</div> 
+ <div class="footer_container">
+    <div class="About_Content">
+    <img src="{% static 'icons/location.png' %}" class="icons" alt="location_icon">
+    <p class="location">Улица 534, бр.29, н.м Марино</p>
+    </div>
+    <div class="About_Content">
+        <img src="{% static 'icons/phone.png' %}" class="icons" alt="phone_icon">
+    <p class="location">02/ 2 556 111</p>
+    </div>
+    <div  class="About_Content">
+        <img src="{% static 'icons/email.png' %}" class="icons" alt="email_icon">
+    <p class="location">suilinden@yahoo.com</p>
+    </div>
+ </div>
+ <div class="footer_container">
+    <strong class="About_Us">{% translate 'За Нас' %}</strong>
+    <p class="AboutUs">{% translate 'СОСУ' %} <strong class="ilindenn">{% translate '„ИЛИНДЕН“' %}</strong>{% translate ' го гледаме како современо, европско училиште полно со професионализам, креативност и сигурен развој кон најелитните училишта за оспособување на кадар од електротехничка струка.' %} </p>
+ </div>
+
 </footer>
