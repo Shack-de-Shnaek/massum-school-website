@@ -8,7 +8,45 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{{article.title}}</h1>
+    <div class="article-wrapper w-100 m-0 pt-2 row justify-content-center">
+        <article class="col-12 col-md-9 col-lg-7 py-2 px-4  d-flex flex-column align-items-center gap-2">
+            <h1>{{ article.title }}</h1>
     
-    {% include 'article_card.html' %}
+            {% if article.images.count > 0 %}
+                <div id="article-carousel" class="article-carousel carousel slide carousel-fade w-100" data-bs-ride="carousel">
+                    <div class="carousel-inner w-100 h-100">
+                        {% for image in article.images.all %}
+                            <div class="carousel-item w-100 {% if forloop.first %}active{% endif %}">
+                                <img src="/media/{{image.image}}" alt="{{image.name}}" class="w-100 d-block m-0 mx-auto object-fit-cover ratio-16x9">
+                                {% if image.title %}
+                                <div class="carousel-caption d-none d-sm-block p-1 bg-secondary bg-opacity-75">
+                                    <p class="opacity-100 m-0 text-dark">{{ image.title }}</p>
+                                </div>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                        
+                        {% if article.images.count > 1 %}
+                            <div class="carousel-indicators">
+                                {% for image in article.images.all %}
+                                    <button type="button" data-bs-target="#article-carousel" data-bs-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active"{% endif %}></button>
+                                {% endfor %}
+                            </div>
+                    
+                            <button class="carousel-control-prev" type="button" data-bs-target="#article-carousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#article-carousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+    
+            <p class="my-2">{{ article.content.html|safe }}</p>
+        </article>
+    </div>
 {% endblock %}

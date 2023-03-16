@@ -1,11 +1,11 @@
 from datetime import datetime
 
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, get_list_or_404
 from django.http import HttpRequest, HttpResponse, HttpResponseBadRequest
 from django.db.models import Q
 from django.utils.translation import get_language
 
-from main.models import Slider, Article
+from main.models import Slider, Article, GalleryCategory, GalleryImage
 
 def index(request: HttpRequest):
     slider = Slider.objects.get(position_slug='index-slider')
@@ -41,4 +41,19 @@ def article(request: HttpRequest, article_id):
     article = get_object_or_404(Article, id=int(article_id))
     return render(request, 'article.html', {
         'article': article
+    })
+
+def gallery(request: HttpRequest):
+    categories = GalleryCategory.objects.prefetch_related('images').all()
+    
+    selected_category = request.GET.get('category', None)
+
+    if selected_category:
+        images = categories.get(name=selected_category)
+    else:
+        images = GalleryImage.objects.all()
+    
+    return render(request, 'gallery.html', {
+        'categories': categories,
+        'images': images
     })

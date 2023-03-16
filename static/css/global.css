@@ -127,11 +127,11 @@ main {
     color: var(--yellow);
 }
 
-.article-carousel .carousel-caption {
+.article-card-carousel .carousel-caption {
     bottom: 2rem !important;
 }
 
-.article-carousel img {
+.article-card-carousel img {
     /* height: 20% !important; */
     max-height: 20rem;
 }

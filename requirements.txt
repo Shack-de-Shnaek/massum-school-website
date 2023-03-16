@@ -1,4 +1,5 @@
 Django==4.1.7
 django-modeltranslation==0.18.9
+django_quill_editor==0.1.40
 python-environ==0.4.54
 Pillow==9.4.0

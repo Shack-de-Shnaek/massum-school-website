@@ -37,9 +37,9 @@
         </button>
     </div>
 
-    <section class="bg-body">
+    <section class="">
         <h1 class="section-header text-light">{% translate 'Новости' %}</h1>
-        <div class="container-fluid row m-0 g-3">
+        <div class="container-fluid row m-0 g-3 bg-body">
             {% for article in articles %}
                 <div class="col-12 col-xl-4">
                     {% include 'article_card.html' %}

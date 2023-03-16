@@ -32,4 +32,12 @@
             <h2>{% translate 'Нема објави според Вашите критериуми' %}</h2>
         {% endif %}
     </section>
+
+    <script>
+        const form = document.querySelector('form')
+        const reset = document.querySelector('form button[type=reset]')
+        reset.addEventListener(() => {
+            form.submit();
+        });
+    </script>
 {% endblock %}
