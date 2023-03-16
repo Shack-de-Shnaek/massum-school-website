@@ -42,3 +42,6 @@ def article(request: HttpRequest, article_id):
     return render(request, 'article.html', {
         'article': article
     })
+
+def about_us(request: HttpRequest):
+    return render(request, 'about_us.html')
