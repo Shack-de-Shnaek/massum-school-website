@@ -47,16 +47,17 @@ def about_us(request: HttpRequest):
     return render(request, 'about_us.html')
 
 def gallery(request: HttpRequest):
-    categories = GalleryCategory.objects.prefetch_related('images').all()
+    categories = GalleryCategory.objects.prefetch_related('images')
     
     selected_category = request.GET.get('category', None)
 
     if selected_category:
-        images = categories.get(name_slug=selected_category)
+        images = categories.get(name_slug=selected_category).images
     else:
-        images = GalleryImage.objects.all()
+        images = GalleryImage.objects
     
     return render(request, 'gallery.html', {
         'categories': categories,
-        'images': images
+        'selected_category': selected_category,
+        'images': images,
     })

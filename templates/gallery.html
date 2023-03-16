@@ -7,28 +7,33 @@
 {% block content %}
     <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
 
-    <form>
-        {% for category in categories %}
-            <label data-category="{{category.name_slug}}" class="category-label p-1 border border-1 border-dark">
-                <span>{{ category.name }}</span>
-                <input class="category-selector d-none" type="radio" name="category" value="{{ category.name_slug }}">
+    <div class="container-sm pt-3 px-2 px-lg-5">
+        <form class="d-flex align-items-center gap-2 justify-content-center">
+            <label data-category="all" class="category-label p-1 border border-1 border-dark {% if not selected_category %}selected{% endif %}">
+                <span>{% translate 'Сите' %}</span>
+                <input class="category-selector d-none" type="radio" name="category" value="">
             </label>
+            {% for category in categories.all %}
+                <label data-category="{{category.name_slug}}" class="category-label p-1 border border-1 border-dark {% if selected_category == category.name_slug %}selected{% endif %}">
+                    <span>{{ category.name }}</span>
+                    <input class="category-selector d-none" type="radio" name="category" value="{{ category.name_slug }}">
+                </label>
+            {% endfor %}
+            <button class="btn btn-success p-1 rounded-0" type="submit">{% translate 'Зачувај' %}</button>
+        </form>
+    </div>
+
+    <section class="mt-3 mx-0 p-1 row g-1">
+        {% for image in images.all %}
+            <div class="img-container position-relative col-6 col-sm-4 col-md-3 overflow-hidden">
+                <img class="w-100 h-100 object-fit-cover" src="/media/{{ image.image }}" alt="{{ image.image.name }}">
+                <div class="img-caption z-1 position-absolute top-0 w-100 h-100 p-3 d-flex flex-column align-items-center bg-yellow text-black opacity-0">
+                    {% if image.title %}
+                        <h3>{{ image.title }}</h3>
+                    {% endif %}
+                    <p class="m-0 mt-auto">{{ image.category.name }}</p>
+                </div>
+            </div>
         {% endfor %}
-        <button class="btn btn-success p-1 rounded-0" type="submit">{% translate 'Зачувај' %}</button>
-    </form>
-
-    <script>
-        const selectors = document.querySelectorAll('.category-selector');
-        selectors.forEach(selector => {
-            console.log(selector.value)
-            selector.addEventListener('change', event => {
-                document.querySelectorAll('.category-label').forEach(label => {
-                    if(label.getAttribute('data-category') === selector.value) label.classList.add('selected');
-                    else label.classList.remove('selected');
-                });
-            });
-        });
-
-
-    </script>
+    </section>
 {% endblock %}

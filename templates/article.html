@@ -9,8 +9,9 @@
 
 {% block content %}
     <div class="article-wrapper w-100 m-0 pt-2 row justify-content-center">
-        <article class="col-12 col-md-9 col-lg-7 py-2 px-4  d-flex flex-column align-items-center gap-2">
-            <h1>{{ article.title }}</h1>
+        <article class="col-12 col-md-9 col-lg-7 py-2 px-4 d-flex flex-column align-items-center gap-2">
+            <h1 class="w-100">{{ article.title }}</h1>
+            <h5 class="w-100">{% translate 'Објавено на ' %}{{ article.created_at|date:"d.m.Y" }}</h5>
     
             {% if article.images.count > 0 %}
                 <div id="article-carousel" class="article-carousel carousel slide carousel-fade w-100" data-bs-ride="carousel">

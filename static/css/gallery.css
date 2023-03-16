@@ -7,3 +7,15 @@
     border-color: var(--bs-success) !important;
     color: var(--bs-light);
 }
+
+.img-container {
+    height: 14rem;
+}
+
+.img-caption {
+    transition: 0.2s;    
+}
+
+.img-container:hover .img-caption {
+    opacity: 0.75 !important;
+}
