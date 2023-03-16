@@ -1,0 +1,34 @@
+{% extends "layout/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block page_title %}{% translate 'Галерија' %}{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+
+    <form>
+        {% for category in categories %}
+            <label data-category="{{category.name_slug}}" class="category-label p-1 border border-1 border-dark">
+                <span>{{ category.name }}</span>
+                <input class="category-selector d-none" type="radio" name="category" value="{{ category.name_slug }}">
+            </label>
+        {% endfor %}
+        <button class="btn btn-success p-1 rounded-0" type="submit">{% translate 'Зачувај' %}</button>
+    </form>
+
+    <script>
+        const selectors = document.querySelectorAll('.category-selector');
+        selectors.forEach(selector => {
+            console.log(selector.value)
+            selector.addEventListener('change', event => {
+                document.querySelectorAll('.category-label').forEach(label => {
+                    if(label.getAttribute('data-category') === selector.value) label.classList.add('selected');
+                    else label.classList.remove('selected');
+                });
+            });
+        });
+
+
+    </script>
+{% endblock %}

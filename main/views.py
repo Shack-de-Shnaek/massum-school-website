@@ -52,7 +52,7 @@ def gallery(request: HttpRequest):
     selected_category = request.GET.get('category', None)
 
     if selected_category:
-        images = categories.get(name=selected_category)
+        images = categories.get(name_slug=selected_category)
     else:
         images = GalleryImage.objects.all()
     
