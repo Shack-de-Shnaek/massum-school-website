@@ -167,8 +167,16 @@ footer .icon {
     color: white;
 }
 
-.ilinden-highlight {
+.text-yellow {
     color: var(--yellow);
+}
+
+.text-primary-green {
+    color: var(--primary-green);
+}
+
+.text-light-green {
+    color: var(--light-green);
 }
 
 @media screen and (max-width: 992px) {
