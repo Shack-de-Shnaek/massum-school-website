@@ -29,6 +29,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path('', views.index, name='index'),
+    path('about-us/', views.about_us, name='about_us'),
     path('gallery/', views.gallery, name='gallery'),
     path('articles/', views.article_list, name='article_list'),
     path('articles/<int:article_id>', views.article, name='article'),

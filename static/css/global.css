@@ -1,6 +1,6 @@
 :root {
     font-size: 16px;
-    --primary-green: #30885C;
+    --primary-green: #2A7952;
     --light-green: #4ABF85;
     --yellow: #FFCC33;
 }
@@ -158,21 +158,25 @@ footer .icon {
 }
 
 .ilinden-logo {
-    color:#4ABF85;
+    color: var(--yellow);
     font-size: 35px;
 }
 
 .sosu-logo {
     font-size: 35px;
-    color: var(--yellow);
+    color: white;
 }
 
 .ilinden-highlight {
-    color: #4ABF85;
+    color: var(--yellow);
 }
 
 @media screen and (max-width: 992px) {
     footer {
         height: fit-content;
     }
+}
+
+.bottom-map {
+    margin-bottom: -4.5rem;
 }

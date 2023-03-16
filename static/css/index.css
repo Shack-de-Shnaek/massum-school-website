@@ -9,10 +9,6 @@
     transform: translateX(-50%);
 }
 
-.bottom-map {
-    margin-bottom: -4.5rem;
-}
-
 .video-container > * {
     max-width: 40rem;
 }
