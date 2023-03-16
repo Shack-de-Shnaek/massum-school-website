@@ -1,0 +1,9 @@
+.category-label {
+    transition: 0.2s;
+}
+
+.category-label.selected {
+    background: var(--light-green) !important;
+    border-color: var(--bs-success) !important;
+    color: var(--bs-light);
+}
