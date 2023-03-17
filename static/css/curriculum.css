@@ -1,0 +1,8 @@
+td, th {
+    text-align: center;
+    border: 2px solid var(--bs-dark);
+}
+
+.year, .fond {
+    background-color: var(--primary-green);
+}

@@ -46,6 +46,9 @@ def article(request: HttpRequest, article_id):
 def about_us(request: HttpRequest):
     return render(request, 'about_us.html')
 
+def curriculum(request: HttpRequest):
+    return render(request, 'curriculum.html')
+
 def gallery(request: HttpRequest):
     categories = GalleryCategory.objects.prefetch_related('images')
     

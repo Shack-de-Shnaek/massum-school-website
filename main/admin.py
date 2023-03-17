@@ -1,7 +1,10 @@
 from django.contrib import admin
 from django.contrib.admin import ModelAdmin, TabularInline, StackedInline
 
-from main.models import Article, ArticleImage, Slider, SliderImage, GalleryCategory, GalleryImage, Employee, Subject, ContactFormMessage
+from main.models import (Article, ArticleImage, Slider, 
+                         SliderImage, GalleryCategory, GalleryImage, 
+                         Employee, Subject, ContactFormMessage,
+                         AttachmentCategory, Attachment)
 
 class ArticleImageInline(TabularInline):
     model = ArticleImage
@@ -41,3 +44,10 @@ class EmployeeAdmin(ModelAdmin):
 @admin.register(ContactFormMessage)
 class ContactFormMessageAdmin(ModelAdmin):
     pass
+
+class AttachmentInline(TabularInline):
+    model = Attachment
+
+@admin.register(AttachmentCategory)
+class AttachmentCategoryAdmin(ModelAdmin):
+    inlines = (AttachmentInline, )

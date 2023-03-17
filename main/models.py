@@ -128,3 +128,27 @@ class ContactFormMessage(models.Model):
     class Meta:
         verbose_name = _('Порака')
         verbose_name_plural = _('Пораки')
+
+class AttachmentCategory(models.Model):
+    name = models.CharField(max_length=20, blank=False, null=False, verbose_name=_('Име'))
+    name_slug = models.SlugField(max_length=20, blank=False, null=False, unique=True, verbose_name=_('Име слаг'))
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = _('Категорија на прилози')
+        verbose_name_plural = _('Категории на прилози')
+
+class Attachment(models.Model):
+    name = models.CharField(max_length=20, blank=False, null=False, verbose_name=_('Име'))
+    file = models.FileField(verbose_name=_('Прилог'))
+
+    category = models.ForeignKey(AttachmentCategory, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = _('Прилог')
+        verbose_name_plural = _('Прилози')
