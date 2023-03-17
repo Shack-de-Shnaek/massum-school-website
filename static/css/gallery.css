@@ -1,5 +1,6 @@
 .category-label {
     transition: 0.2s;
+    cursor: pointer !important;
 }
 
 .category-label.selected {

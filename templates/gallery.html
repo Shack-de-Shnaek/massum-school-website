@@ -8,18 +8,17 @@
     <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
 
     <div class="container-sm pt-3 px-2 px-lg-5">
-        <form class="d-flex align-items-center gap-2 justify-content-center">
+        <form class="d-flex align-items-center gap-2 justify-content-center" id="category-form">
             <label data-category="all" class="category-label p-1 border border-1 border-dark {% if not selected_category %}selected{% endif %}">
                 <span>{% translate 'Сите' %}</span>
-                <input class="category-selector d-none" type="radio" name="category" value="">
+                <input class="category-selector d-none" type="radio" name="category" value="" onclick="this.form.submit()">
             </label>
             {% for category in categories.all %}
                 <label data-category="{{category.name_slug}}" class="category-label p-1 border border-1 border-dark {% if selected_category == category.name_slug %}selected{% endif %}">
                     <span>{{ category.name }}</span>
-                    <input class="category-selector d-none" type="radio" name="category" value="{{ category.name_slug }}">
+                    <input class="category-selector d-none" type="radio" name="category" value="{{ category.name_slug }}" onclick="this.form.submit()">
                 </label>
             {% endfor %}
-            <button class="btn btn-success p-1 rounded-0" type="submit">{% translate 'Зачувај' %}</button>
         </form>
     </div>
 
