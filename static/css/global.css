@@ -7,6 +7,7 @@
 
 a {
     text-decoration: none !important;
+    color: inherit;
 }
 
 nav {
@@ -137,7 +138,7 @@ main {
 }
 
 footer {
-    height: 20rem;
+    max-height: 20rem;
     padding-top: 20px;
 }
 
@@ -154,7 +155,6 @@ footer .icon {
     height: 25px;
     background-color: var(--bs-light);
     border-radius: 50%;
-    
 }
 
 .ilinden-logo {
@@ -181,10 +181,19 @@ footer .icon {
 
 @media screen and (max-width: 992px) {
     footer {
-        height: fit-content;
+        max-height: fit-content;
     }
 }
 
 .bottom-map {
     margin-bottom: -4.5rem;
+}
+
+.text-hover-yellow {
+    color: var(--bs-dark) !important;
+    transition: 0.2s;
+}
+
+.text-hover-yellow:hover, .text-hover-yellow:focus {
+    color: var(--yellow) !important;
 }
