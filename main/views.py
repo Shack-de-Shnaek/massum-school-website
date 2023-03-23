@@ -64,3 +64,6 @@ def gallery(request: HttpRequest):
         'selected_category': selected_category,
         'images': images,
     })
+    
+def contact(request: HttpRequest):
+    return render(request, 'contact.html')

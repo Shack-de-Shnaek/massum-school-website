@@ -1,0 +1,69 @@
+{% extends "layout/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block page_title %}{% translate 'Контакт' %}{% endblock %}
+
+{% block content %}
+ <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+ <link rel="stylesheet" href="{% static 'css/global.css' %}">
+ <main style="background-image: url({% static 'icons/sosuilinden.jpg' %}); background-repeat:no-repeat; margin-top:-20%;" >
+          <div class="col-md-6 right" style="width: 100%; height: 100%;">
+
+               <div class="input-box bg-white" style="margin-top: 25%; border-radius: 5%; margin-bottom: 25%;">
+                  <header style="margin-top: 5%; font-size: large;">{% translate 'Контактирајте не' %}</header>
+                  <div class="input-field">
+                    <input type="text" class="input" id="Name-Surname" required>
+                    <label for="text">{% translate 'Име и Презиме' %}</label>
+                </div>
+                  <div class="input-field">
+                      <input type="text" class="input" id="email" required autocomplete="off">
+                      <label for="email">{% translate 'Емаил' %}</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" class="input" id="title" required>
+                    <label for="message">{% translate 'Наслов' %}</label>
+                </div>
+                  <div class="input-field">
+                      <input type="text" class="input" id="message" required>
+                      <label for="message">{% translate 'Вашата порака' %}</label>
+                  </div>
+                  <div class="input-field">
+                      <input type="submit" class="submit" value="SEND">
+                      
+                  </div>
+                  <div class="icons">
+                    <div class="icon">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      <p>
+                      <a href="https://www.google.com/maps/dir//sosu+ilinden/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x135438daccb390ed:0xa2544433bb236be9?sa=X&ved=2ahUKEwjLuJffv979AhUig_0HHVgJCCQQ9Rd6BAhMEAQ" style="color:black;">Улица 534, бр.29, н.м Марино</a>
+                    </p>
+                    </div>
+                    <div class="icon">
+                      <i class="bi bi-phone-fill"></i>
+                      <p>
+                      <a href="tel:022556111" style="color: black;">02/ 2 556 111</a>
+                    </p>
+                    </div>
+                    <div class="icon">
+                      <i class="bi bi-envelope-fill"></i>
+                      <p>
+                      <a href="mailto:suilinden@yahoo.com" style="color: black;">suilinden@yahoo.com</a>
+                      </p>
+                    </div>
+                  </div>
+                  
+               </div>
+          </div>
+      </div>
+  </div>
+</div>
+</body>
+</html>
+</section>
+</main>
+<div class="bg-black" style="margin-top: -13%;"></div>
+    <section class="mt-5 bottom-map">
+        <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.0775546549135!2d21.58139251568422!3d41.98931326642568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135438daccb390ed%3A0xa2544433bb236be9!2z0KHQntCh0KMgItCY0LvQuNC90LTQtdC9Ig!5e1!3m2!1sen!2smk!4v1646334169948!5m2!1sen!2smk" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+    </section>
+{% endblock %}
