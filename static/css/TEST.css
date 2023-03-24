@@ -1,0 +1,12 @@
+.border-aticle {
+    border-top-left-radius: 37px 140px;
+    border-top-right-radius: 23px 130px;
+    border-bottom-left-radius: 110px 19px;
+    border-bottom-right-radius: 120px 24px;
+    border: solid 3px lightgreen;
+    padding: 40px 60px;
+    max-width: 300px;
+    width: 70%;
+    margin: 100px auto 0;
+    box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+  }

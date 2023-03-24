@@ -35,6 +35,7 @@ urlpatterns += i18n_patterns(
     path('articles/', views.article_list, name='article_list'),
     path('articles/<int:article_id>', views.article, name='article'),
     path('contact/', views.contact, name='contact'),
+    path('TEST/', views.TEST, name='TEST'),
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
