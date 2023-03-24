@@ -44,7 +44,7 @@ ul hr {
 }
 
 main {
-    min-height: calc(100vh - 24rem);
+    min-height: calc(100vh - 12rem);
     margin-top: 4rem;
     padding-bottom: 4rem;
 }
@@ -133,12 +133,12 @@ main {
 }
 
 .article-card-carousel img {
-    /* height: 20% !important; */
     max-height: 20rem;
 }
 
 footer {
-    max-height: 20rem;
+    min-height: fit-content;
+    max-height: 24rem;
     padding-top: 20px;
 }
 
@@ -181,7 +181,7 @@ footer .icon {
 
 @media screen and (max-width: 992px) {
     footer {
-        max-height: fit-content;
+        max-height: none;
     }
 }
 
