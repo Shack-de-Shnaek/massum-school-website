@@ -3,9 +3,10 @@ from datetime import datetime
 from django.shortcuts import render, get_object_or_404, get_list_or_404
 from django.http import HttpRequest, HttpResponse, HttpResponseBadRequest
 from django.db.models import Q
+from django.core.exceptions import ValidationError
 from django.utils.translation import get_language
 
-from main.models import Slider, Article, GalleryCategory, GalleryImage
+from main.models import Slider, Article, GalleryCategory, GalleryImage, ContactFormMessage
 
 def index(request: HttpRequest):
     slider = Slider.objects.get(position_slug='index-slider')
@@ -66,4 +67,21 @@ def gallery(request: HttpRequest):
     })
     
 def contact(request: HttpRequest):
-    return render(request, 'contact.html')
+    if request.method == 'GET':
+        return render(request, 'contact.html', {
+            'status': 'unsent'
+        })
+    
+    elif request.method == 'POST':
+        status = 'success'
+        try:
+            data = dict(request.POST)
+            del data['csrfmiddlewaretoken']
+            ContactFormMessage.objects.create(**data)
+        except ValidationError:
+            status = 'failed'
+        
+        return render(request, 'contact.html', {
+            'status': status
+        })
+    

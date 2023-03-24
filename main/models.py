@@ -118,7 +118,7 @@ class ContactFormMessage(models.Model):
     full_name = models.CharField(max_length=50, blank=False, null=False, verbose_name=_('Име и презиме'))
     email = models.EmailField(blank=False, null=False, verbose_name=_('Емаил'))
     title = models.CharField(max_length=100, blank=False, null=False, verbose_name=_('Наслов'))
-    content = QuillField(blank=True, null=True, verbose_name=_('Содржина'))
+    content = models.TextField(blank=True, null=True, verbose_name=_('Содржина'))
     
     created_at = models.DateTimeField(auto_now_add=True)
 
