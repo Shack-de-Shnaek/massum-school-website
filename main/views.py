@@ -84,5 +84,6 @@ def contact(request: HttpRequest):
         return render(request, 'contact.html', {
             'status': status
         })
-def TEST(request: HttpRequest):
-    return render(request, 'TEST.html')
+
+def attachments(request: HttpRequest):
+    return render(request, 'attachments.html')
