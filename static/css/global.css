@@ -1,3 +1,4 @@
+/* Global */
 :root {
     font-size: 16px;
     --primary-green: #2A7952;
@@ -10,6 +11,45 @@ a {
     color: inherit;
 }
 
+.text-hover-yellow {
+    color: var(--bs-dark) !important;
+    transition: 0.2s;
+}
+
+.text-hover-yellow:hover, .text-hover-yellow:focus {
+    color: var(--yellow) !important;
+}
+
+main {
+    min-height: calc(100vh - 12rem);
+    margin-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.bg-primary-green {
+    background-color: var(--primary-green)!important;
+}
+
+.bg-light-green {
+    background-color: var(--light-green)!important;
+}
+
+.bg-yellow {
+    background-color: var(--yellow) !important;
+}
+
+.section-header {
+    width: fit-content;
+    padding: 1rem;
+    border: 3px solid var(--light-green);
+    text-align: center;
+}
+
+.section-header > * {
+    margin: 0;
+}
+
+/* Navbar */
 nav {
     height: 4rem;
 }
@@ -43,30 +83,6 @@ ul hr {
   border-bottom: 1px solid #30885C;
 }
 
-main {
-    min-height: calc(100vh - 12rem);
-    margin-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-.bg-primary-green {
-    background-color: var(--primary-green)!important;
-}
-
-.bg-light-green {
-    background-color: var(--light-green)!important;
-}
-
-.bg-yellow {
-    background-color: var(--yellow) !important;
-}
-
-.section-header {
-    padding: 0.5rem;
-    background: var(--light-green);
-    text-align: center;
-}
-
 .nav-brand-container {
     display: flex;
     justify-content: space-between;
@@ -82,12 +98,6 @@ main {
     }   
 }
 
-.section-header {
-    padding: 0.5rem;
-    background: var(--light-green);
-    text-align: center;
-}
-
 .nav-brand-container {
     display: flex;
     justify-content: space-between;
@@ -101,10 +111,6 @@ main {
     .nav-brand-container {
         width: 100%;
     }   
-}
-
-.language-dropdown.show {
-    max-width: fit-content;
 }
 
 .language-btn {
@@ -136,6 +142,7 @@ main {
     max-height: 20rem;
 }
 
+/* Footer */
 footer {
     min-height: fit-content;
     max-height: 24rem;
@@ -187,13 +194,4 @@ footer .icon {
 
 .bottom-map {
     margin-bottom: -4.5rem;
-}
-
-.text-hover-yellow {
-    color: var(--bs-dark) !important;
-    transition: 0.2s;
-}
-
-.text-hover-yellow:hover, .text-hover-yellow:focus {
-    color: var(--yellow) !important;
 }

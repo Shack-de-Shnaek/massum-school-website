@@ -6,7 +6,7 @@ from django.db.models import Q
 from django.core.exceptions import ValidationError
 from django.utils.translation import get_language
 
-from main.models import Slider, Article, GalleryCategory, GalleryImage, ContactFormMessage
+from main.models import Slider, Article, GalleryCategory, GalleryImage, ContactFormMessage, AttachmentCategory
 
 def index(request: HttpRequest):
     slider = Slider.objects.get(position_slug='index-slider')
@@ -86,4 +86,14 @@ def contact(request: HttpRequest):
         })
 
 def attachments(request: HttpRequest):
-    return render(request, 'attachments.html')
+    attachment_categories = AttachmentCategory.objects.prefetch_related('attachments').filter(name_slug__in=(
+        'self-evaluation', 
+        'final-bill', 
+        'public-acquisition',
+        'documents',
+        'brochure-for-parents',
+    ))
+
+    return render(request, 'attachments.html', {
+        'attachment_categories': attachment_categories
+    })

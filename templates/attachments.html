@@ -7,33 +7,24 @@
 {% block content %}
 	<link rel="stylesheet" href="{% static 'css/attachments.css' %}">
     
-    <div class="d-flex justify-content-center text-light-green pt-5 border-aticle  " >
-        <h2>{% translate 'Прилози' %}</h2>
-    </div>
-    <div  class="bg-primary-green p-3 mt-5 " style=" margin-left: 20%;  border-radius: 15px ; max-width: 60%;">
-    <div class="d-flex justify-content-xl-center mt-5 text-primary-green">
-        <p class="d-flex justify-content-xl-center text-light"  >{% translate 'ИЗВЕШТАЈ ОД СПРОВЕДЕНА САМОЕВАЛУАЦИЈА на Средното општинско стручно училиште „Илинден“ од Општина Илинден – Мај 2021' %} </p>
-    </div>       
-    <div class="d-flex justify-content-center ">
-        <a class="btn btn-outline-secondary text-hover-yellow text-bg-light" href="#" role="button"> {% translate 'Самоевалуација' %}</a>
-    </div>
-    </div>
-
-    <!--VTOR-->
-    <div class="d-flex justify-content-center text-light-green pt-5 border-aticle  " >
-        <h2>{% translate 'Додатна' %}</h2>
-     </div>
-     
-    <div  class="bg-primary-green p-3 mt-5 " style="   border-radius: 15px ; max-width: 60%; margin-left: 20%;">
-    <div class="d-flex justify-content-xl-center mt-5 text-primary-green">
-        <div>
-        <h6 class="text-white align-content-center justify-content-center ">Додатна настава се организира за ученици кои постигнуваат значителни резултати по одделни наставни предмети (талентирани ученици).
-            Преку додатната настава се прошируваат и продлабочуваат знаењата на учениците по одделни предмети и подрачја и учениците се подготвуваат за учество на натпревари. Секој предметен наставник прави распоред за изведување на додатната настава и навремено ги запознава учениците со распоредот.</h6>
-        <p class="d-flex justify-content-xl-center text-light"  >{% translate 'ИЗВЕШТАЈ ОД СПРОВЕДЕНА САМОЕВАЛУАЦИЈА на Средното општинско стручно училиште „Илинден“ од Општина Илинден – Мај 2021' %} </p>
-    </div>       </div>
-    <div class="d-flex justify-content-center ">
-        <a class="btn btn-outline-secondary text-hover-yellow text-bg-light" href="#" role="button"> {% translate 'Распоред за додатна настава - ПРЕВЗЕМИ' %}</a>
-    </div>
+    <div class="pt-5 px-3 px-md-5 container-lg d-flex flex-column align-items-center gap-5">
+        {% for category in attachment_categories %}
+            <section class="d-flex flex-column align-items-center gap-2" id="{{ category.name_slug }}">
+                <div class="text-light-green section-header" >
+                    <h2>{{ category.name }}</h2>
+                </div>
+            
+                {% for attachment in category.attachments.all %}
+                    <div class="bg-primary-green p-3 w-100">
+                        <p class="d-flex justify-content-xl-center text-light">{{ attachment.name }}</p>
+                
+                        <div class="d-flex justify-content-center ">
+                            <a class="btn btn-attachment rounded-0" href="/media/{{ attachment.file }}">{% translate 'Превземи' %}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </section>
+        {% endfor %}
     </div>
     
 	<section class="bottom-map mt-5">

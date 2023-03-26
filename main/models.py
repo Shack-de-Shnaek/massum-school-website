@@ -130,8 +130,8 @@ class ContactFormMessage(models.Model):
         verbose_name_plural = _('Пораки')
 
 class AttachmentCategory(models.Model):
-    name = models.CharField(max_length=20, blank=False, null=False, verbose_name=_('Име'))
-    name_slug = models.SlugField(max_length=20, blank=False, null=False, unique=True, verbose_name=_('Име слаг'))
+    name = models.CharField(max_length=100, blank=False, null=False, verbose_name=_('Име'))
+    name_slug = models.SlugField(max_length=100, blank=False, null=False, unique=True, verbose_name=_('Име слаг'))
 
     def __str__(self):
         return self.name
@@ -141,10 +141,10 @@ class AttachmentCategory(models.Model):
         verbose_name_plural = _('Категории на прилози')
 
 class Attachment(models.Model):
-    name = models.CharField(max_length=20, blank=False, null=False, verbose_name=_('Име'))
+    name = models.CharField(max_length=100, blank=False, null=False, verbose_name=_('Име'))
     file = models.FileField(verbose_name=_('Прилог'))
 
-    category = models.ForeignKey(AttachmentCategory, on_delete=models.CASCADE)
+    category = models.ForeignKey(AttachmentCategory, on_delete=models.CASCADE, related_name='attachments')
 
     def __str__(self):
         return self.name

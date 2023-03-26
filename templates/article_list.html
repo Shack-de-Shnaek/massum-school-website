@@ -12,11 +12,11 @@
         <form class="w-100 px-5 row gy-2">
             <label class="col-12 col-lg-4 d-flex gap-2 align-items-center">
                 <span class="m-0">{% translate "Месец" %}</span>
-                <input class="d-inline-block form-control rounded-0" type="month" name="time">
+                <input class="d-inline-block form-control rounded-0" type="month" name="time" value="{{ request.GET.time }}">
             </label>
             <label class="col-12 col-lg-4 d-flex gap-2 align-items-center">
                 <span class="m-0">{% translate "Текст" %}</span>
-                <input class="d-inline-block form-control rounded-0" type="search" name="search">
+                <input class="d-inline-block form-control rounded-0" type="search" name="search" value="{{ request.GET.search }}">
             </label>
 
             <div class="col-12 col-lg-4 d-flex gap-2 align-items-center">
