@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-24 08:13+0000\n"
+"POT-Creation-Date: 2023-03-26 13:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: main/models.py:7 main/models.py:85 main/models.py:120
-#: templates/contact.html:16
+#: templates/contact.html:24
 msgid "Наслов"
 msgstr "Titulli"
 
@@ -35,7 +35,7 @@ msgstr "Krijuar në"
 msgid "Објава"
 msgstr "Artikulli"
 
-#: main/models.py:17
+#: main/models.py:17 templates/attachments.html:5
 msgid "Објави"
 msgstr "Artikuj"
 
@@ -136,11 +136,11 @@ msgstr "Subjekti"
 msgid "Предмети"
 msgstr "Lëndët"
 
-#: main/models.py:118 templates/contact.html:14
+#: main/models.py:118 templates/contact.html:22
 msgid "Име и презиме"
 msgstr "Emri dhe mbiemri"
 
-#: main/models.py:129 templates/contact.html:17
+#: main/models.py:129 templates/contact.html:25
 msgid "Порака"
 msgstr "Mesazhi"
 
@@ -156,7 +156,7 @@ msgstr "Kategoria e bashkëngjitjes"
 msgid "Категории на прилози"
 msgstr "Kategoritë e shtojcave"
 
-#: main/models.py:145 main/models.py:153"
+#: main/models.py:145 main/models.py:153
 msgid "Прилог"
 msgstr "Dokumenti"
 
@@ -183,26 +183,21 @@ msgstr "Rreth Nesh"
 
 #: templates/about_us.html:10
 msgid "ВИЗИЈА, МИСИЈА, ЦЕЛИ и РЕСУРСИ на училиштето"
-msgstr ""
+msgstr "VIZIONI, MISIONI, QËLLIMET DHE BURIMET e shkollës"
 
 #: templates/about_us.html:16
 msgid "Визија на училиштето"
-msgstr ""
+msgstr "Vizioni i shkollës"
 
 #: templates/about_us.html:20
-#, fuzzy
-#| msgid ""
-#| " го гледаме како современо, европско училиште полно со професионализам, "
-#| "креативност и сигурен развој кон најелитните училишта за оспособување на "
-#| "кадар од електротехничка струка."
 msgid ""
 "Нашето училиште го гледаме како современо, европско училиште полно со "
 "професионализам, креативност и сигурен развој кон најелитните училишта за "
 "оспособување на кадар од електротехничка струка."
 msgstr ""
 "Ne e shohim shkollën tonë si një shkollë moderne, evropiane plot me "
-"profesionalizëm, kreativitet dhe zhvillim të besueshëm drejt shkollave më elitare për "
-"trajnimi i personelit nga profesioni elektrotekni k"
+"profesionalizëm, kreativitet dhe zhvillim të besueshëm drejt shkollave më "
+"elitare për trajnimi i personelit nga profesioni elektrotekni k"
 
 #: templates/about_us.html:26
 msgid "Мисија на училиштето"
@@ -223,20 +218,21 @@ msgid ""
 "                        – Да образуваме стручни кадри оспособени за примена "
 "на научните достигнувања во практиката, за творечко и одговорно однесување "
 "спрема работата, средината, општеството и спрема самите себе\n"
+"                    "
 msgstr ""
 "\n"
-" – Për të edukuar studentë (përputhshëm me atë evropian"
-"standarde) me njohuri, aftësi dhe aftësi njohëse dhe teorike cilësore dhe të përjetshme, "
-"aftësitë dhe shprehitë (të cilat do të përmirësohen vazhdimisht dhe gjatë gjithë jetës) si dhe"
-"aftësia për të zotëruar teknologjinë moderne për hir të teknologjisë"
-"ndryshimet e rrjedhës së punës;<br><br>\n"
+" – Për të edukuar studentë (përputhshëm me atë evropianstandarde) me "
+"njohuri, aftësi dhe aftësi njohëse dhe teorike cilësore dhe të përjetshme, "
+"aftësitë dhe shprehitë (të cilat do të përmirësohen vazhdimisht dhe gjatë "
+"gjithë jetës) si dheaftësia për të zotëruar teknologjinë moderne për hir të "
+"teknologjisëndryshimet e rrjedhës së punës;<br><br>\n"
 "\n"
-" – Të mbështesim dhe forcojmë vetëpunësimin"
-"produktiviteti;<br><br>\n"
+" – Të mbështesim dhe forcojmë vetëpunësiminproduktiviteti;<br><br>\n"
 "\n"
-" – Le të trajnojmë staf profesional të trajnuar për aplikim"
-"të arritjeve shkencore në praktikë, për sjellje krijuese dhe të përgjegjshme"
-"drejt punës, mjedisit, shoqërisë dhe ndaj vetes\n"
+" – Le të trajnojmë staf profesional të trajnuar për aplikimtë arritjeve "
+"shkencore në praktikë, për sjellje krijuese dhe të përgjegjshmedrejt punës, "
+"mjedisit, shoqërisë dhe ndaj vetes"
+""
 
 #: templates/about_us.html:44
 msgid "Цели на училиштето"
@@ -266,29 +262,30 @@ msgid ""
 "најсовремена опрема, со нови наставни и нагледни средства<br><br>\n"
 "                        \n"
 "                        – Максимална употреба на ИКТ во наставата\n"
+"                    "
 msgstr ""
 "\n"
-" – Krijimi i një shkolle moderne që përpiqet të "
-"të sigurojë një imazh të një shkolle të dëshirueshme nga nxënësit dhe kështu"
-"Të bashkohemi në radhët e shkollave më cilësore që nuk kërkojnë nxënës"
-"por vetë studentët zgjedhin të regjistrohen dhe të vazhdojnë shkollimin tek ne<br><br>\n"
+" – Krijimi i një shkolle moderne që përpiqet të të sigurojë një imazh të një "
+"shkolle të dëshirueshme nga nxënësit dhe kështuTë bashkohemi në radhët e "
+"shkollave më cilësore që nuk kërkojnë nxënëspor vetë studentët zgjedhin të "
+"regjistrohen dhe të vazhdojnë shkollimin tek ne<br><br>\n"
 "\n"
-" – Zgjerimi i bashkëpunimit me më shumë kompani se"
-"ekonomia dhe nënshkrimi i memorandumeve të bashkëpunimit<br><br>\n"
+" – Zgjerimi i bashkëpunimit me më shumë kompani seekonomia dhe nënshkrimi i "
+"memorandumeve të bashkëpunimit<br><br>\n"
 "\n"
-" – Ofrimi i praktikës së punës për studentët tanë në "
-"kompanitë me të cilat janë nënshkruar memorandumet e bashkëpunimit<br><br>\n"
+" – Ofrimi i praktikës së punës për studentët tanë në kompanitë me të cilat "
+"janë nënshkruar memorandumet e bashkëpunimit<br><br>\n"
 "\n"
-"- Mbulim më i madh i Gjeneratës së Fundit"
-"Arsimi fillor në komunën tonë dhe rritja e numrit të paraleleve dhe"
-"profile arsimore<br><br>\n"
+"- Mbulim më i madh i Gjeneratës së FunditArsimi fillor në komunën tonë dhe "
+"rritja e numrit të paraleleve dheprofile arsimore<br><br>\n"
 "\n"
 " – Promovimi i vazhdueshëm i shkollës<br><br>\n"
 "\n"
-" – Pajisja e kabineteve dhe laboratorëve me "
-"pajisje moderne, me mjete të reja mësimore dhe pamore<br><br>\n"
+" – Pajisja e kabineteve dhe laboratorëve me pajisje moderne, me mjete të "
+"reja mësimore dhe pamore<br><br>\n"
 "\n"
-" – Përdorimi maksimal i TIK-ut në mësimdhënie\n"
+" – Përdorimi maksimal i TIK-ut në mësimdhënie"
+""
 
 #: templates/article.html:14
 msgid "Објавено на "
@@ -315,16 +312,28 @@ msgstr "Rivendos"
 msgid "Нема објави според Вашите критериуми"
 msgstr "Nuk ka artikuj të bazuar në kriteret tuaja"
 
+#: templates/attachments.html:22
+msgid "Превземи"
+msgstr "Shkarko"
+
 #: templates/contact.html:5 templates/layout/footer.html:13
-#: templates/layout/navbar.html:64
+#: templates/layout/navbar.html:67
 msgid "Контакт"
 msgstr "Kontaktoni"
 
-#: templates/contact.html:12
+#: templates/contact.html:14
 msgid "Контактирајте не"
 msgstr "Na kontaktoni"
 
+#: templates/contact.html:17
+msgid "Пораката неможеше да се испрати. Ве молиме обидете се подоцна."
+msgstr "Mesazhi nuk mund të dërgohej. Ju lutemi provoni përsëri më vonë."
+
 #: templates/contact.html:19
+msgid "Пораката е успешно испратена."
+msgstr "Mesazhi është dërguar me sukses."
+
+#: templates/contact.html:27
 msgid "Испрати"
 msgstr "Dërgo"
 
@@ -335,7 +344,8 @@ msgstr "Galeri"
 
 #: templates/curriculum.html:12 templates/curriculum.html:226
 msgid "Образовен профил: ЕЛЕКТРОТЕХНИЧАР ЗА ЕЛЕКТРОНИКА И ТЕЛЕКОМУНИКАЦИЈА"
-msgstr "Profili arsimor: INXHINIER ELEKTRONIKE PËR ELEKTRONIKË DHE TELEKOMUNIKIM"
+msgstr ""
+"Profili arsimor: INXHINIER ELEKTRONIKE PËR ELEKTRONIKË DHE TELEKOMUNIKIM"
 
 #: templates/curriculum.html:13 templates/curriculum.html:227
 msgid "Времетраење: четири години"
@@ -426,7 +436,7 @@ msgstr "Inxhinieri elektrike"
 
 #: templates/curriculum.html:97 templates/curriculum.html:311
 msgid "Електротехнички материјали и елементи"
-msgstr ""
+msgstr "Materialet dhe elementet elektroteknike"
 
 #: templates/curriculum.html:101 templates/curriculum.html:315
 msgid "Техничко цртање"
@@ -553,30 +563,46 @@ msgstr ""
 msgid "СОСУ Илинден"
 msgstr "SOSU Ilinden"
 
-#: templates/layout/navbar.html:38
+#: templates/layout/navbar.html:25
+msgid "Документи"
+msgstr "Dokumentet"
+
+#: templates/layout/navbar.html:29
+msgid "Завршна сметка"
+msgstr "Fatura përfundimtare"
+
+#: templates/layout/navbar.html:33
+msgid "Јавна набавка"
+msgstr "Prokurimi publik"
+
+#: templates/layout/navbar.html:36
+msgid "Самоевалуација"
+msgstr "Vetëvlerësimi"
+
+#: templates/layout/navbar.html:41
 msgid "Настава"
 msgstr "Kurrikula"
 
-#: templates/layout/navbar.html:41
+#: templates/layout/navbar.html:44
 msgid "Информации за ученици"
 msgstr "Informacion për studentët"
 
-#: templates/layout/navbar.html:44
+#: templates/layout/navbar.html:47
 msgid "Матура"
 msgstr "Diplomimi"
 
-#: templates/layout/navbar.html:48
+#: templates/layout/navbar.html:51
 msgid "Вонредни ученици"
 msgstr "Studentë të jashtëzakonshëm"
 
-#: templates/layout/navbar.html:52
+#: templates/layout/navbar.html:55
 msgid "Распоред на часови"
 msgstr "Orari i shkollës"
 
-#: templates/layout/navbar.html:56
+#: templates/layout/navbar.html:59
 msgid "Кодекс на однесување"
 msgstr "Kodi i Sjelljes"
 
-#: templates/layout/navbar.html:61
+#: templates/layout/navbar.html:64
 msgid "За нас"
 msgstr "Për NE"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-24 08:13+0000\n"
+"POT-Creation-Date: 2023-03-26 13:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: main/models.py:7 main/models.py:85 main/models.py:120
-#: templates/contact.html:16
+#: templates/contact.html:24
 msgid "Наслов"
 msgstr "Title"
 
@@ -35,7 +35,7 @@ msgstr "Created at"
 msgid "Објава"
 msgstr "Article"
 
-#: main/models.py:17
+#: main/models.py:17 templates/attachments.html:5
 msgid "Објави"
 msgstr "Articles"
 
@@ -136,11 +136,11 @@ msgstr "Subject"
 msgid "Предмети"
 msgstr "Subjects"
 
-#: main/models.py:118 templates/contact.html:14
+#: main/models.py:118 templates/contact.html:22
 msgid "Име и презиме"
 msgstr "Name and surname"
 
-#: main/models.py:129 templates/contact.html:17
+#: main/models.py:129 templates/contact.html:25
 msgid "Порака"
 msgstr "Message"
 
@@ -195,9 +195,9 @@ msgid ""
 "професионализам, креативност и сигурен развој кон најелитните училишта за "
 "оспособување на кадар од електротехничка струка."
 msgstr ""
-"We see our school as a modern, european school filled with "
-"professionalism,  creativity, developing into one of the most elite "
-"vocational schools  in the area of electrical engineering. "
+"We see our school as a modern, european school filled with professionalism,  "
+"creativity, developing into one of the most elite vocational schools  in the "
+"area of electrical engineering. "
 
 #: templates/about_us.html:26
 msgid "Мисија на училиштето"
@@ -218,20 +218,21 @@ msgid ""
 "                        – Да образуваме стручни кадри оспособени за примена "
 "на научните достигнувања во практиката, за творечко и одговорно однесување "
 "спрема работата, средината, општеството и спрема самите себе\n"
+"                    "
 msgstr ""
 "\n"
-" – To educate students (compatible with European "
-"standards) with quality and lifelong cognitive and theoretical knowledge, skills, "
-"skills and habits (which will be continuously and lifelong improved) as well as "
-"abilities to master modern technology for the sake of technology"
-"workflow changes;<br><br>\n"
+" – To educate students (compatible with European standards) with quality and "
+"lifelong cognitive and theoretical knowledge, skills, skills and habits "
+"(which will be continuously and lifelong improved) as well as abilities to "
+"master modern technology for the sake of technologyworkflow changes;"
+"<br><br>\n"
 " \n"
-" – Let's support self-employment and strengthen "
-"productivity;<br><br>\n"
+" – Let's support self-employment and strengthen productivity;<br><br>\n"
 " \n"
-" – Let's train professional staff trained for application"
-"of scientific achievements in practice, for creative and responsible behavior"
-"toward work, the environment, society and toward ourselves\n"
+" – Let's train professional staff trained for applicationof scientific "
+"achievements in practice, for creative and responsible behaviortoward work, "
+"the environment, society and toward ourselves\n"
+"\n"
 
 #: templates/about_us.html:44
 msgid "Цели на училиштето"
@@ -261,29 +262,31 @@ msgid ""
 "најсовремена опрема, со нови наставни и нагледни средства<br><br>\n"
 "                        \n"
 "                        – Максимална употреба на ИКТ во наставата\n"
+"                    "
 msgstr ""
 "\n"
-" – Creation of a modern school that strives to "
-"provide an image of a desirable school by students and thus"
-"to join the ranks of the best quality schools that do not require students"
-"but the students themselves choose to enroll and continue their education with us<br><br>\n"
+" – Creation of a modern school that strives to provide an image of a "
+"desirable school by students and thusto join the ranks of the best quality "
+"schools that do not require studentsbut the students themselves choose to "
+"enroll and continue their education with us<br><br>\n"
 " \n"
-" – Expanding cooperation with more companies than "
-"the economy and signing of Memorandums of Cooperation<br><br>\n"
+" – Expanding cooperation with more companies than the economy and signing of "
+"Memorandums of Cooperation<br><br>\n"
 " \n"
-" – Providing work practice for our students in "
-"the companies with which the Memorandums of Cooperation have been signed<br><br>\n"
+" – Providing work practice for our students in the companies with which the "
+"Memorandums of Cooperation have been signed<br><br>\n"
 " \n"
-" – Greater Coverage of the Ending Generation "
-"primary education in our municipality and increasing the number of classes and"
-"education profiles<br><br>\n"
+" – Greater Coverage of the Ending Generation primary education in our "
+"municipality and increasing the number of classes andeducation "
+"profiles<br><br>\n"
 " \n"
 " – Continuous promotion of the school<br><br>\n"
 " \n"
-" – Equipping the cabinets and laboratories with "
-"state-of-the-art equipment, with new teaching and visual aids<br><br>\n"
+" – Equipping the cabinets and laboratories with state-of-the-art equipment, "
+"with new teaching and visual aids<br><br>\n"
 " \n"
 " – Maximum use of ICT in teaching\n"
+"\n"
 
 #: templates/article.html:14
 msgid "Објавено на "
@@ -310,16 +313,28 @@ msgstr "Reset"
 msgid "Нема објави според Вашите критериуми"
 msgstr "There are no articles based on your criteria"
 
+#: templates/attachments.html:22
+msgid "Превземи"
+msgstr "Download"
+
 #: templates/contact.html:5 templates/layout/footer.html:13
-#: templates/layout/navbar.html:64
+#: templates/layout/navbar.html:67
 msgid "Контакт"
 msgstr "Contact"
 
-#: templates/contact.html:12
+#: templates/contact.html:14
 msgid "Контактирајте не"
 msgstr "Contact us"
 
+#: templates/contact.html:17
+msgid "Пораката неможеше да се испрати. Ве молиме обидете се подоцна."
+msgstr "The message could not be sent. Please try again later."
+
 #: templates/contact.html:19
+msgid "Пораката е успешно испратена."
+msgstr "The message was sent successfully."
+
+#: templates/contact.html:27
 msgid "Испрати"
 msgstr "Send"
 
@@ -330,7 +345,9 @@ msgstr "Gallery"
 
 #: templates/curriculum.html:12 templates/curriculum.html:226
 msgid "Образовен профил: ЕЛЕКТРОТЕХНИЧАР ЗА ЕЛЕКТРОНИКА И ТЕЛЕКОМУНИКАЦИЈА"
-msgstr "Educational profile: ELECTRICAL ENGINEER FOR ELECTRONICS AND TELECOMMUNICATION"
+msgstr ""
+"Educational profile: ELECTRICAL ENGINEER FOR ELECTRONICS AND "
+"TELECOMMUNICATION"
 
 #: templates/curriculum.html:13 templates/curriculum.html:227
 msgid "Времетраење: четири години"
@@ -547,30 +564,46 @@ msgstr ""
 msgid "СОСУ Илинден"
 msgstr "SOSU Ilinden"
 
-#: templates/layout/navbar.html:38
+#: templates/layout/navbar.html:25
+msgid "Документи"
+msgstr "Documents"
+
+#: templates/layout/navbar.html:29
+msgid "Завршна сметка"
+msgstr "Final bill"
+
+#: templates/layout/navbar.html:33
+msgid "Јавна набавка"
+msgstr "Public acqusition"
+
+#: templates/layout/navbar.html:36
+msgid "Самоевалуација"
+msgstr "Self-evaluation"
+
+#: templates/layout/navbar.html:41
 msgid "Настава"
 msgstr "Curriculum"
 
-#: templates/layout/navbar.html:41
+#: templates/layout/navbar.html:44
 msgid "Информации за ученици"
 msgstr "Information for students"
 
-#: templates/layout/navbar.html:44
+#: templates/layout/navbar.html:47
 msgid "Матура"
 msgstr "Matura"
 
-#: templates/layout/navbar.html:48
+#: templates/layout/navbar.html:51
 msgid "Вонредни ученици"
 msgstr "Part-time studnets"
 
-#: templates/layout/navbar.html:52
+#: templates/layout/navbar.html:55
 msgid "Распоред на часови"
 msgstr "Class schedule"
 
-#: templates/layout/navbar.html:56
+#: templates/layout/navbar.html:59
 msgid "Кодекс на однесување"
 msgstr "Code of conduct"
 
-#: templates/layout/navbar.html:61
+#: templates/layout/navbar.html:64
 msgid "За нас"
 msgstr "About us"
