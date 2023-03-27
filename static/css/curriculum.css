@@ -6,3 +6,7 @@ td, th {
 .year, .fond {
     background-color: var(--primary-green);
 }
+
+.table-wrapper {
+    overflow-x: scroll;
+}

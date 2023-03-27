@@ -8,8 +8,12 @@
 {% endblock %}
 
 {% block content %}
+    <link rel="stylesheet" href="{% static 'css/article_list.css' %}">
+
     <section class="container-sm p-3 px-2 px-md-5 d-flex flex-column align-items-center gap-3">
-        <form class="w-100 px-5 row gy-2">
+        <h2 class="section-header text-light-green">{% translate 'Новости' %}</h1>
+        
+        <form id="article-filter-form" class="w-100 row gy-2">
             <label class="col-12 col-lg-4 d-flex gap-2 align-items-center">
                 <span class="m-0">{% translate "Месец" %}</span>
                 <input class="d-inline-block form-control rounded-0" type="month" name="time" value="{{ request.GET.time }}">
@@ -25,9 +29,11 @@
             </div>
         </form>
         {% if articles.count > 0 %}
-            {% for article in articles %}
-                {% include 'article_card.html' %}
-            {% endfor %}
+            <div class="w-100 d-flex flex-column align-items-stretch align-items-lg-center gap-3">
+                {% for article in articles %}
+                    {% include 'article_card.html' %}
+                {% endfor %}
+            </div>
         {% else %}
             <h2>{% translate 'Нема објави според Вашите критериуми' %}</h2>
         {% endif %}

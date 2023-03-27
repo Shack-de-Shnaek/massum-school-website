@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="{% static 'css/curriculum.css' %}">
 
     <section class="pt-5">
-        <div class="table-wrapper container-md p-5 shadow">
+        <div class="table-container container-md p-3 p-md-5 shadow">
             <h2>{% translate "Образовен профил: ЕЛЕКТРОТЕХНИЧАР ЗА ЕЛЕКТРОНИКА И ТЕЛЕКОМУНИКАЦИЈА" %}</h2>
             <h4>{% translate "Времетраење: четири години" %}</h4>
-            <table class="curriculum-table w-100" cellpadding="0" cellspacing="0">
+            <div class="table-wrapper w-100">
+                <table class="curriculum-table w-100" cellpadding="0" cellspacing="0">
                 <tbody>
                     <tr>
                         <th rowspan="3" class="w-50 bg-light-green">{% translate "Програмски подрачја и наставни предмети" %}</th>
@@ -68,7 +69,7 @@
                     </tr>
                     <tr class="subject-row">
                         <td class="subject-name">{% translate "Предмети по функција на струката" %}</td>
-                        <td>5</td> <td></td> <td>5</td> <td></td> <td>2</td> <td></td> <td>2</td> <td></td>
+                        <td>5</td> <td>-</td> <td>5</td> <td>-</td> <td>2</td> <td>-</td> <td>2</td> <td>-</td>
                     </tr>
                     <tr class="subject-row">
                         <td class="subject-name">{% translate "Математика" %}</td>
@@ -141,12 +142,12 @@
                     </tr>
                     <tr class="subject-row">
                         <td>{% translate "Феријална практика" %}</td>
-                        <td></td> <td>5</td> <td></td> <td>10 дена</td> <td></td> <td>15 дена</td> <td></td> <td></td> 
+                        <td>-</td> <td>5</td> <td>-</td> <td>10 дена</td> <td>-</td> <td>15 дена</td> <td>-</td> <td>-</td> 
                     </tr>
         
                     <tr class="total">
                         <td>{% translate "Вкупно: " %}</td>
-                        <td></td> <td></td> <td>4</td> <td>144</td> <td>6</td> <td>226</td> <td>5</td> <td>165</td> 
+                        <td>-</td> <td>-</td> <td>4</td> <td>144</td> <td>6</td> <td>226</td> <td>5</td> <td>165</td> 
                     </tr>
         
                     <tr class="category">
@@ -155,7 +156,7 @@
         
                     <tr class="subject-row">
                         <td>{% translate "Предмети по функција на завршен испит" %}</td>
-                        <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> 
+                        <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> 
                     </tr>
                     <tr class="subject-row">
                         <td>{% translate "Електронски склопови и уреди" %}</td>
@@ -175,7 +176,7 @@
                     </tr>
                     <tr class="subject-row">
                         <td>{% translate "Предмети по функција на матура" %}</td>
-                        <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> 
+                        <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> 
                     </tr>
                     <tr class="subject-row">
                         <td>{% translate "Математика" %}</td>
@@ -202,30 +203,32 @@
         
                     <tr class="subject-row">
                         <td>{% translate "Спорт и спортски активности" %}</td>
-                        <td></td> <td>72</td> <td></td> <td>72</td> <td></td> <td>72</td> <td></td> <td>66</td> 
+                        <td>-</td> <td>72</td> <td>-</td> <td>72</td> <td>-</td> <td>72</td> <td>-</td> <td>66</td> 
                     </tr>
                     <tr class="subject-row">
                         <td>{% translate "Активности од област на културата" %}</td>
-                        <td></td> <td>72</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> 
+                        <td>-</td> <td>72</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> 
                     </tr>
                     <tr class="subject-row">
                         <td>{% translate "Факултивна настава" %}</td>
-                        <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td>до 66</td> 
+                        <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>до 66</td> 
                     </tr>
                     <tr class="subject-row">
                         <td>{% translate "Слободни часови на училиштето" %}</td>
-                        <td></td> <td>до 72</td> <td></td> <td>до 72</td> <td></td> <td>до 72</td> <td></td> <td>до 66</td> 
+                        <td>-</td> <td>до 72</td> <td>-</td> <td>до 72</td> <td>-</td> <td>до 72</td> <td>-</td> <td>до 66</td> 
                     </tr>
                 </tbody>
             </table>
+            </div>
         </div>
     </section>
 
     <section class="pt-5">
-        <div class="table-wrapper container-md p-5 shadow">
-            <h2>{% translate "Образовен профил: ЕЛЕКТРОТЕХНИЧАР ЗА ЕЛЕКТРОНИКА И ТЕЛЕКОМУНИКАЦИЈА" %}</h2>
+        <div class="table-container container-md p-3 p-md-5 shadow">
+            <h2>{% translate "Образовен профил: ЕЛЕКТРОТЕХНИЧАР ЗА КОМПЈУТЕРСКА ТЕХНИКА И АВТОМАТИКА" %}</h2>
             <h4>{% translate "Времетраење: четири години" %}</h4>
-            <table class="curriculum-table w-100" cellpadding="0" cellspacing="0">
+            <div class="table-wrapper w-100">
+                <table class="curriculum-table w-100" cellpadding="0" cellspacing="0">
                 <tbody>
                     <tr>
                         <th rowspan="3" class="w-50 bg-light-green">{% translate "Програмски подрачја и наставни предмети" %}</th>
@@ -282,7 +285,7 @@
                     </tr>
                     <tr class="subject-row">
                         <td class="subject-name">{% translate "Предмети по функција на струката" %}</td>
-                        <td>5</td> <td></td> <td>5</td> <td></td> <td>2</td> <td></td> <td>2</td> <td></td>
+                        <td>5</td> <td>-</td> <td>5</td> <td>-</td> <td>2</td> <td>-</td> <td>2</td> <td>-</td>
                     </tr>
                     <tr class="subject-row">
                         <td class="subject-name">{% translate "Математика" %}</td>
@@ -316,7 +319,7 @@
                         <td>2</td> <td>72</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
                     </tr>
                     <tr class="subject-row">
-                        <td class="subject-name">{% translate "Аналогна електроника" %}</td>
+                        <td class="subject-name">{% translate "Електроника" %}</td>
                         <td>-</td> <td>-</td> <td>4</td> <td>144</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
                     </tr>
                     <tr class="subject-row">
@@ -324,25 +327,25 @@
                         <td>-</td> <td>-</td> <td>3</td> <td>108</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
                     </tr>
                     <tr class="subject-row">
-                        <td class="subject-name">{% translate "Телекомуникации" %}</td>
-                        <td>-</td> <td>-</td> <td>2</td> <td>72</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                        <td class="subject-name">{% translate "Програмирање" %}</td>
+                        <td>-</td> <td>-</td> <td>2</td> <td>72</td> <td>3</td> <td>108</td> <td>3</td> <td>99</td>
                     </tr>
                     <tr class="subject-row">
-                        <td class="subject-name">{% translate "Дигитална електроника и микропроцесори" %}</td>
-                        <td>-</td> <td>-</td> <td>3</td> <td>108</td> <td>5</td> <td>180</td> <td>-</td> <td>-</td>
+                        <td class="subject-name">{% translate "Автоматика" %}</td>
+                        <td>-</td> <td>-</td> <td>2</td> <td>72</td> <td>3</td> <td>180</td> <td>-</td> <td>-</td>
                     </tr>
                     <tr class="subject-row">
-                        <td class="subject-name">{% translate "Електронски склопови и уреди" %}</td>
-                        <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>3</td> <td>108</td> <td>5</td> <td>165</td>
+                        <td class="subject-name">{% translate "Дигитални системи" %}</td>
+                        <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>5</td> <td>180</td> <td>3</td> <td>99</td>
                     </tr>
                     <tr class="subject-row">
-                        <td class="subject-name">{% translate "Телекомуникациски склопови и уреди" %}</td>
-                        <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>3</td> <td>108</td> <td>3</td> <td>99</td>
+                        <td class="subject-name">{% translate "Процесно управување	" %}</td>
+                        <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>3</td> <td>99</td>
                     </tr>
                     
                     <tr class="total">
                         <td>{% translate "Вкупно: " %}</td>
-                        <td>11</td> <td>396</td> <td>12</td> <td>432</td> <td>11</td> <td>396</td> <td>8</td> <td>294</td> 
+                        <td>11</td> <td>396</td> <td>11</td> <td>396</td> <td>11</td> <td>396</td> <td>9</td> <td>297</td> 
                     </tr>
         
                     <tr class="category">
@@ -351,16 +354,16 @@
         
                     <tr class="subject-row">
                         <td>{% translate "Практична настава" %}</td>
-                        <td>-</td> <td>-</td> <td>4</td> <td>144</td> <td>6</td> <td>226</td> <td>5</td> <td>165</td> 
+                        <td>-</td> <td>-</td> <td>5</td> <td>1080</td> <td>6</td> <td>226</td> <td>4</td> <td>132</td> 
                     </tr>
                     <tr class="subject-row">
                         <td>{% translate "Феријална практика" %}</td>
-                        <td></td> <td>5</td> <td></td> <td>10 дена</td> <td></td> <td>15 дена</td> <td></td> <td></td> 
+                        <td>-</td> <td>5</td> <td>-</td> <td>10 дена</td> <td>-</td> <td>15 дена</td> <td>-</td> <td>-</td> 
                     </tr>
         
                     <tr class="total">
                         <td>{% translate "Вкупно: " %}</td>
-                        <td></td> <td></td> <td>4</td> <td>144</td> <td>6</td> <td>226</td> <td>5</td> <td>165</td> 
+                        <td>-</td> <td>-</td> <td>5</td> <td>180</td> <td>6</td> <td>226</td> <td>4</td> <td>132</td> 
                     </tr>
         
                     <tr class="category">
@@ -369,18 +372,18 @@
         
                     <tr class="subject-row">
                         <td>{% translate "Предмети по функција на завршен испит" %}</td>
-                        <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> 
+                        <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> 
                     </tr>
                     <tr class="subject-row">
-                        <td>{% translate "Електронски склопови и уреди" %}</td>
+                        <td>{% translate "Програмирање" %}</td>
                         <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>2</td> <td>72</td> <td>2</td> <td>66</td> 
                     </tr>
                     <tr class="subject-row">
-                        <td>{% translate "Телекомуникациски склопови и уреди" %}</td>
+                        <td>{% translate "Дигитални системи	" %}</td>
                         <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>2</td> <td>72</td> <td>2</td> <td>66</td> 
                     </tr>
                     <tr class="subject-row">
-                        <td>{% translate "Дигитална електроника и микропроцесори" %}</td>
+                        <td>{% translate "Автоматика" %}</td>
                         <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>2</td> <td>72</td> <td>2</td> <td>66</td> 
                     </tr>
                     <tr class="subject-row">
@@ -389,7 +392,7 @@
                     </tr>
                     <tr class="subject-row">
                         <td>{% translate "Предмети по функција на матура" %}</td>
-                        <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> 
+                        <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> 
                     </tr>
                     <tr class="subject-row">
                         <td>{% translate "Математика" %}</td>
@@ -416,22 +419,23 @@
         
                     <tr class="subject-row">
                         <td>{% translate "Спорт и спортски активности" %}</td>
-                        <td></td> <td>72</td> <td></td> <td>72</td> <td></td> <td>72</td> <td></td> <td>66</td> 
+                        <td>-</td> <td>72</td> <td>-</td> <td>72</td> <td>-</td> <td>72</td> <td>-</td> <td>66</td> 
                     </tr>
                     <tr class="subject-row">
                         <td>{% translate "Активности од област на културата" %}</td>
-                        <td></td> <td>72</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> 
+                        <td>-</td> <td>72</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> 
                     </tr>
                     <tr class="subject-row">
                         <td>{% translate "Факултивна настава" %}</td>
-                        <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td>до 66</td> 
+                        <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>до 66</td> 
                     </tr>
                     <tr class="subject-row">
                         <td>{% translate "Слободни часови на училиштето" %}</td>
-                        <td></td> <td>до 72</td> <td></td> <td>до 72</td> <td></td> <td>до 72</td> <td></td> <td>до 66</td> 
+                        <td>-</td> <td>до 72</td> <td>-</td> <td>до 72</td> <td>-</td> <td>до 72</td> <td>-</td> <td>до 66</td> 
                     </tr>
                 </tbody>
             </table>
+            </div>
         </div>
     </section>
 {% endblock %}

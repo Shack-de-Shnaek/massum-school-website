@@ -37,8 +37,10 @@
         </button>
     </div>
 
-    <section class="">
-        <h1 class="section-header text-light">{% translate 'Новости' %}</h1>
+    <section class="py-4">
+        <a href="{% url 'article_list' %}">
+            <h2 class="section-header mx-auto text-light-green">{% translate 'Новости' %}</h2>
+        </a>
         <div class="container-fluid row m-0 g-3 bg-body">
             {% for article in articles %}
                 <div class="col-12 col-xl-4">

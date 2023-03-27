@@ -7,7 +7,7 @@
 }
 
 #contact-form {
-    width: clamp(300px, 40%, 40rem);
+    width: clamp(350px, 40%, 40rem);
     font-size: 1.15rem;
 }
 
@@ -27,4 +27,11 @@
     border-bottom: 3px solid var(--primary-green);
     outline: none;
     background-color: var(--bs-white) !important;
+}
+
+@media screen and (max-width: 769px) {
+    #contact-form {
+        width: 95%;
+        font-size: 1rem;
+    }
 }
