@@ -6,7 +6,8 @@ from django.db.models import Q
 from django.core.exceptions import ValidationError
 from django.utils.translation import get_language
 
-from main.models import Slider, Article, GalleryCategory, GalleryImage, ContactFormMessage, AttachmentCategory
+from main.models import (Slider, Article, GalleryCategory, GalleryImage, ContactFormMessage, 
+                         AttachmentCategory, Employee)
 
 def index(request: HttpRequest):
     slider = Slider.objects.get(position_slug='index-slider')
@@ -45,7 +46,11 @@ def article(request: HttpRequest, article_id):
     })
 
 def about_us(request: HttpRequest):
-    return render(request, 'about_us.html')
+    employees = Employee.objects.all()
+
+    return render(request, 'about_us.html', {
+        'employees': employees
+    })
 
 def curriculum(request: HttpRequest):
     return render(request, 'curriculum.html')

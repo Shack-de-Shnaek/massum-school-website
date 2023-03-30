@@ -7,65 +7,71 @@
 {% block content %}
  <link rel="stylesheet" href="{% static 'css/about_us.css' %}">
 
-    <h2 class="w-100 text-center text-light-green">{% translate 'ВИЗИЈА, МИСИЈА, ЦЕЛИ и РЕСУРСИ на училиштето' %}</h2>
-    <section>
-        <div class="accordion accordion-flush d-flex flex-column flex-md-row w-100 justify-content-center" id="accordionFlushExample">
-            <div class="accordion-item position-relative p-1 w-100 border-0">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed z-0 bg-warning bg-opacity-50" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    {% translate 'Визија на училиштето' %}
-                </button>
-              </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse position-absolute bg-light m-0" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">{% translate 'Нашето училиште го гледаме како современо, европско училиште полно со професионализам, креативност и сигурен развој кон најелитните училишта за оспособување на кадар од електротехничка струка.' %}</div>
-              </div>
-            </div>
-            <div class="accordion-item position-relative p-1 w-100 border-0">
-              <h2 class="accordion-header" id="flush-headingTwo">
-                <button class="accordion-button collapsed z-0 bg-warning bg-opacity-50" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    {% translate 'Мисија на училиштето' %}
-                </button>
-              </h2>
-              <div id="flush-collapseTwo" class="accordion-collapse collapse position-absolute bg-light m-0" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                    {% blocktranslate%}
-                        – Да образуваме ученици (компатибилно со европските стандарди) со квалитетни и доживотни когнитивни и теоретски знаења, умеења, вештини и навики (кои континуирано и доживотно ќе се надоградуваат) како и способности за совладување на современата технологија заради технолошките промени во процесот на работа;<br><br>
-            
-                        – Да го поддржуваме самовработувањето и јакнеме продуктивноста;<br><br>
-            
-                        – Да образуваме стручни кадри оспособени за примена на научните достигнувања во практиката, за творечко и одговорно однесување спрема работата, средината, општеството и спрема самите себе
-                    {% endblocktranslate%}
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item position-relative p-1 w-100 border-0">
-              <h2 class="accordion-header" id="flush-headingThree">
-                <button class="accordion-button collapsed z-0 bg-warning bg-opacity-50" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    {% translate 'Цели на училиштето' %}
-                </button>
-              </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse position-absolute bg-light m-0" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                    {% blocktranslate%}
-                        – Создавање на модерно училиште кое се стреми да обезбеди имиџ на посакувано училиште од страна на учениците и на тој начин да влезе во редот на оние најквалитетни училишта кои не ги бараат учениците туку учениците сами избираат да се запишат и дообразуваат кај нас<br><br>
-            
-                        – Проширување на соработката со повеќе компании од стопанството и потпишување на Меморандуми за соработка<br><br>
-                        
-                        – Обезбедување работна пракса за нашите ученици во компаниите со кои се потпишани Меморандумите за соработка<br><br>
-                        
-                        – Поголема опфатеност на генерацијата што завршува основно образование во нашата општина и зголемување на бројот на паралелки и образовни профили<br><br>
-                        
-                        – Континуирано промовирање на училиштето<br><br>
-                        
-                        – Опремување на кабинетите и лабораториите со најсовремена опрема, со нови наставни и нагледни средства<br><br>
-                        
-                        – Максимална употреба на ИКТ во наставата
-                    {% endblocktranslate%}
-                </div>
-              </div>
-            </div>
-          </div>
+    <section class="pt-5 container-xl">
+      	<h2 class="section-header mx-auto text-light-green">{% translate 'ВИЗИЈА, МИСИЈА, ЦЕЛИ и РЕСУРСИ на училиштето' %}</h2>
+		
+		<div class="mission-vision-goals pt-4 row row-cols-1 row-cols-lg-3 g-3 g-xl-5">
+			<div class="col">
+				<div class="shadow p-3">
+					<h3 class="d-flex flex-column align-items-center gap-1">
+						<i class="fa fa-lightbulb text-yellow"></i>
+						<p class="m-0">{% translate 'Визија на училиштето' %}</p>
+					</h3>
+					<p>
+						{% translate 'Нашето училиште го гледаме како современо, европско училиште полно со професионализам, креативност и сигурен развој кон најелитните училишта за оспособување на кадар од електротехничка струка.' %}
+					</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="shadow p-3">
+					<h3 class="d-flex flex-column align-items-center gap-1">
+						<i class="fa fa-pen text-yellow"></i>
+						<p class="m-0">{% translate 'Мисија на училиштето' %}</p>
+					</h3>
+					<ul class="ps-3">
+						<li>{% translate 'Да образуваме ученици (компатибилно со европските стандарди) со квалитетни и доживотни когнитивни и теоретски знаења, умеења, вештини и навики (кои континуирано и доживотно ќе се надоградуваат) како и способности за совладување на современата технологија заради технолошките промени во процесот на работа;' %}</li>
+						<li>{% translate 'Да го поддржуваме самовработувањето и јакнеме продуктивноста;' %}</li>
+						<li>{% translate 'Да образуваме стручни кадри оспособени за примена на научните достигнувања во практиката, за творечко и одговорно однесување спрема работата, средината, општеството и спрема самите себе.' %}</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col">
+				<div class="shadow p-3">
+					<h3 class="d-flex flex-column align-items-center gap-1">
+						<i class="fa fa-bullseye text-yellow"></i>
+						<p class="m-0">{% translate 'Цели на училиштето' %}</p>
+					</h3>
+					<ul class="ps-3">
+						<li>{% translate 'Создавање на модерно училиште кое се стреми да обезбеди имиџ на посакувано училиште од страна на учениците и на тој начин да влезе во редот на оние најквалитетни училишта кои не ги бараат учениците туку учениците сами избираат да се запишат и дообразуваат кај нас' %}</li>
+						<li>{% translate 'Проширување на соработката со повеќе компании од стопанството и потпишување на Меморандуми за соработка' %}</li>
+						<li>{% translate 'Обезбедување работна пракса за нашите ученици во компаниите со кои се потпишани Меморандумите за соработка' %}</li>
+						<li>{% translate 'Поголема опфатеност на генерацијата што завршува основно образование во нашата општина и зголемување на бројот на паралелки и образовни профили' %}</li>
+						<li>{% translate 'Континуирано промовирање на училиштето' %}</li>
+						<li>{% translate 'Опремување на кабинетите и лабораториите со најсовремена опрема, со нови наставни и нагледни средства' %}</li>
+						<li>{% translate 'Максимална употреба на ИКТ во наставата' %}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
     </section>
+
+	<section class="pt-5 container-lg">
+		<h2 class="section-header mx-auto text-light-green">{% translate 'Вработени' %}</h2>
+
+		<ul class="employee-list list-unstyled m-0 pt-4">
+			{% for employee in employees %}
+				<li class="employee col">
+					<div class="text-center shadow">
+						<div class="image-wrapper w-100">
+							<img src="/media/{{ employee.image }}" alt="{{ employee.full_name }}" class="w-100 object-fit-contain">
+						</div>
+						<h5 class="m-0 py-2 px-1 bg-light-green text-light">{{ employee.full_name }}</h5>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+
     <section class="mt-5 bottom-map">
         <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.0775546549135!2d21.58139251568422!3d41.98931326642568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135438daccb390ed%3A0xa2544433bb236be9!2z0KHQntCh0KMgItCY0LvQuNC90LTQtdC9Ig!5e1!3m2!1sen!2smk!4v1646334169948!5m2!1sen!2smk" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
     </section>

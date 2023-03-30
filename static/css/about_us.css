@@ -3,6 +3,18 @@
     color: black;
 }
 
+.mission-vision-goals svg {
+    font-size: 3.5rem;
+}
+
+.employee-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    justify-content: space-evenly;
+    column-gap: 0.75rem;
+    row-gap: 1rem;
+}
+
 @media screen and (max-width: 767px) {
     .accordion-collapse {
         position: static !important;
