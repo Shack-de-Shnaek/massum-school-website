@@ -145,6 +145,9 @@ STATICFILES_DIRS = [
 
 STATIC_URL = 'static/'
 
+if env('ON_SERVER') == True:
+    STATIC_ROOT = env('STATIC_ROOT')
+
 MEDIA_ROOT = BASE_DIR / 'media/'
 
 MEDIA_URL = 'media/'
