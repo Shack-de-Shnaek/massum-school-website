@@ -93,12 +93,13 @@ class GalleryImage(models.Model):
         verbose_name_plural = _('Слики за галерија')
 
 class Employee(models.Model):
-    full_name = models.CharField(max_length=50, blank=False, null=False, verbose_name=_('Вработен'))
+    full_name = models.CharField(max_length=50, blank=False, null=False, verbose_name=_('Име и презиме'))
+    image = models.ImageField(blank=False, null=False, verbose_name=_('Слика'))
     title = models.CharField(max_length=20, blank=False, null=False, verbose_name=_('Титула'))
     email = models.EmailField(blank=False, null=False, verbose_name=_('Емаил'))
 
     def __str__(self):
-        return self.full_clean
+        return self.full_name
 
     class Meta:
         verbose_name = _('Вработен')

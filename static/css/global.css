@@ -41,7 +41,8 @@ main {
 .section-header {
     width: fit-content;
     padding: 1rem;
-    border: 3px solid var(--light-green);
+    border: 4px solid var(--light-green);
+    font-weight: bold;
     text-align: center;
 }
 
