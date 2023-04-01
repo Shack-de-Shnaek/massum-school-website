@@ -15,6 +15,18 @@
     row-gap: 1rem;
 }
 
+.employee-overlay {
+    transition: 0.2s;
+}
+
+.employee-overlay ul {
+    list-style: '- ';
+}
+
+.employee:hover .employee-overlay {
+    opacity: 75% !important;
+}
+
 @media screen and (max-width: 767px) {
     .accordion-collapse {
         position: static !important;

@@ -46,7 +46,7 @@ def article(request: HttpRequest, article_id):
     })
 
 def about_us(request: HttpRequest):
-    employees = Employee.objects.all()
+    employees = Employee.objects.prefetch_related('subjects').all()
 
     return render(request, 'about_us.html', {
         'employees': employees
@@ -97,7 +97,19 @@ def attachments(request: HttpRequest):
         'public-acquisition',
         'documents',
         'brochure-for-parents',
-    ))
+    )).order_by('id')
+
+    return render(request, 'attachments.html', {
+        'attachment_categories': attachment_categories
+    })
+
+def curriculum(request: HttpRequest):
+    attachment_categories = AttachmentCategory.objects.prefetch_related('attachments').filter(name_slug__in=(
+        'matura-exam',
+        'graduation-exam',
+        'graduation-project',
+        'exam-questions'
+    )).order_by('id')
 
     return render(request, 'attachments.html', {
         'attachment_categories': attachment_categories

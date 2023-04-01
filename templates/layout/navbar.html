@@ -42,22 +42,22 @@
                     <a href="{% url 'curriculum' %}" class="nav-link px-2">{% translate 'Настава' %}</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="" class="nav-link px-2 dropdown-toggle" role="button" data-bs-toggle="dropdown">{% translate 'Информации за ученици' %}</a>
+                    <a href="" class="nav-link px-2 dropdown-toggle" role="button" data-bs-toggle="dropdown">{% translate 'Матура' %}</a>
                     <ul class="dropdown-menu rounded-0 bg-light-green dropdown-shadow py-0">
                         <li>
-                            <a href="" class="nav-link dropdown-item bg-light-green py-1 text-center text-lg-start">{% translate 'Матура' %}</a>
+                            <a href="{% url 'curriculum' %}#matura-exam" class="nav-link dropdown-item bg-light-green py-1 text-center text-lg-start">{% translate 'Државна матура' %}</a>
                         </li>
                         <hr />
                         <li>
-                            <a href="" class="nav-link dropdown-item bg-light-green py-1 text-center text-lg-start">{% translate 'Вонредни ученици' %}</a>
+                            <a href="{% url 'curriculum' %}#graduation-exam" class="nav-link dropdown-item bg-light-green py-1 text-center text-lg-start">{% translate 'Завршен испит' %}</a>
                         </li>
                         <hr />
                         <li>
-                            <a href="" class="nav-link dropdown-item bg-light-green py-1 text-center text-lg-start">{% translate 'Распоред на часови' %}</a>
+                            <a href="{% url 'curriculum' %}#graudation-project" class="nav-link dropdown-item bg-light-green py-1 text-center text-lg-start">{% translate 'Проектна задача' %}</a>
                         </li>
                         <hr />
                         <li>
-                            <a href="" class="nav-link dropdown-item bg-light-green pt-1 text-center text-lg-start">{% translate 'Кодекс на однесување' %}</a>
+                            <a href="{% url 'curriculum' %}#exam-questions" class="nav-link dropdown-item bg-light-green pt-1 text-center text-lg-start">{% translate 'Испитни прашања' %}</a>
                         </li>
                     </ul>
                 </li>

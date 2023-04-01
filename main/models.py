@@ -97,6 +97,7 @@ class Employee(models.Model):
     image = models.ImageField(blank=False, null=False, verbose_name=_('Слика'))
     title = models.CharField(max_length=20, blank=False, null=False, verbose_name=_('Титула'))
     email = models.EmailField(blank=False, null=False, verbose_name=_('Емаил'))
+    subjects = models.ManyToManyField('Subject', related_name='subjects', verbose_name=_('Предмети'))
 
     def __str__(self):
         return self.full_name
@@ -105,8 +106,7 @@ class Employee(models.Model):
         verbose_name = _('Вработен')
         verbose_name_plural = _('Вработени')
 class Subject(models.Model):
-    name = models.CharField(max_length=20, blank=False, null=False, verbose_name=_('Име'))
-    employees = models.ManyToManyField(Employee, related_name='subjects', verbose_name=_('Вработени'))
+    name = models.CharField(max_length=50, blank=False, null=False, verbose_name=_('Име'))
  
     def __str__(self):
         return self.name

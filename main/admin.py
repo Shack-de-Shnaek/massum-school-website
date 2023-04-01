@@ -39,6 +39,7 @@ class SubjectInline(TabularInline):
 @admin.register(Employee)
 class EmployeeAdmin(ModelAdmin):
     # inlines = (SubjectInline, )
+    filter_horizontal = ('subjects', )
     pass
 
 @admin.register(ContactFormMessage)

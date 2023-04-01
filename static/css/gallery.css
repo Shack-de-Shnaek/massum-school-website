@@ -11,6 +11,7 @@
 
 .img-container {
     height: 14rem;
+    cursor: pointer;
 }
 
 .img-caption {
@@ -19,4 +20,8 @@
 
 .img-container:hover .img-caption {
     opacity: 0.75 !important;
+}
+
+.modal-image {
+    max-width: 100%;
 }

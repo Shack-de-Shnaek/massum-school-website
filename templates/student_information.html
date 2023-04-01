@@ -2,11 +2,11 @@
 {% load i18n %}
 {% load static %}
 
-{% block page_title %}{% translate 'Објави' %}{% endblock %}
+{% block page_title %}{% translate 'Информации за ученици' %}{% endblock %}
 
 {% block content %}
-	<link rel="stylesheet" type="text/css" href="{% static 'css/attachments.css' %}">
-    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/attachments.css' %}">
+        
     <div class="pt-5 px-3 px-md-5 container-lg d-flex flex-column align-items-center gap-5">
         {% for category in attachment_categories %}
             <section class="d-flex flex-column align-items-center gap-2" id="{{ category.name_slug }}">

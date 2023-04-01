@@ -24,13 +24,27 @@
 
     <section class="mt-3 mx-0 p-1 row g-1">
         {% for image in images.all %}
-            <div class="img-container position-relative col-6 col-sm-4 col-md-3 overflow-hidden">
+            <div class="img-container position-relative col-6 col-sm-4 col-md-3 overflow-hidden" data-bs-toggle="modal" data-bs-target="#image-{{ image.id }}-modal">
                 <img class="w-100 h-100 object-fit-cover" src="/media/{{ image.image }}" alt="{{ image.image.name }}">
                 <div class="img-caption z-1 position-absolute top-0 w-100 h-100 p-3 d-flex flex-column align-items-center bg-yellow text-black opacity-0">
                     {% if image.title %}
                         <h3>{{ image.title }}</h3>
                     {% endif %}
                     <p class="m-0 mt-auto">{{ image.category.name }}</p>
+                </div>
+            </div>
+
+            <div class="modal fade modal-lg" id="image-{{ image.id }}-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content rounded-0">
+                        <div class="modal-header rounded-0 text-center bg-yellow">
+                            <div class="modal-title">{{ image.category.name }} {{ image.title }}</div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-0 py-2 text-center">
+                            <img class="modal-image" src="/media/{{ image.image }}">
+                        </div>
+                    </div>
                 </div>
             </div>
         {% endfor %}
