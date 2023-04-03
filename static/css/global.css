@@ -38,6 +38,10 @@ main {
     background-color: var(--yellow) !important;
 }
 
+section {
+    transition: 0.2s;
+}
+
 .section-header {
     width: fit-content;
     padding: 1rem;

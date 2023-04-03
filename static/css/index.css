@@ -21,6 +21,10 @@
     font-size: 3rem;
 }
 
+.counter-number {
+    font-size: clamp(2rem, 5vw, 6rem);
+}
+
 @media screen and (max-width: 992px) {
     #main-carousel {
         min-height: 25vh;

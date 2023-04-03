@@ -41,6 +41,23 @@
         </a>
     </div>
 
+    <section id="counter-section" class="w-100 py-3 py-md-5">
+        <div class="counter-container container-md m-0 mx-auto p-3 row row-cols-1 row-cols-sm-3">
+            <div class="col m-0 px-2 d-flex flex-row flex-sm-column justify-content-center align-items-center gap-2 ">
+                <h1 id="student-counter" class="counter-number text-yellow m-0">0</span>
+                <h5 class="counter-subtitle m-0">{% translate 'Ученици' %}</span>
+            </div>
+            <div class="col m-0 px-2 d-flex flex-row flex-sm-column justify-content-center align-items-center gap-2 ">
+                <h1 id="professor-counter" class="counter-number text-yellow m-0">0</span>
+                <h5 class="counter-subtitle m-0">{% translate 'Професори' %}</span>
+            </div>
+            <div class="col m-0 px-2 d-flex flex-row flex-sm-column justify-content-center align-items-center gap-2 ">
+                <h1 id="years-counter" class="counter-number text-yellow m-0">0</span>
+                <h5 class="counter-subtitle m-0">{% translate 'Години' %}</span>
+            </div>
+        </div>
+    </section>
+
     <section id="news-section" class="py-4">
         <a href="{% url 'article_list' %}">
             <h2 class="section-header mx-auto text-light-green">{% translate 'Новости' %}</h2>
@@ -64,8 +81,37 @@
 
     <script>
         document.querySelector('.scroll-down').onclick = () => {
-            console.log('a')
             scrollBy(0, window.innerHeight - 64);
+        }
+
+        const counterContainer = document.querySelector('#counter-section');
+        let counterHasStarted = false;
+        const initiateCounters = () => {
+            if(window.scrollY >= counterContainer.offsetTop - window.innerHeight + 200 && !counterHasStarted) {
+                counter("years-counter", 0, 11, 2500);
+                counter("student-counter", 100, 350, 2500);
+                counter("professor-counter", 0, 18, 2500);
+
+                counterHasStarted = true;
+            };
+        }
+
+        window.addEventListener('load', initiateCounters);
+        window.addEventListener('scroll', initiateCounters);
+
+        const counter = (id, start, end, duration) => {
+            const obj = document.getElementById(id);
+            const range = end - start;
+            const increment = end > start ? 1 : -1;
+            const step = Math.abs(Math.floor(duration / range));
+            
+            let current = start;
+            const timer = setInterval(() => {
+                current += increment;
+                obj.textContent = current;
+
+                if (current >= end) clearInterval(timer);
+            }, step);
         }
     </script>
 {% endblock %}
