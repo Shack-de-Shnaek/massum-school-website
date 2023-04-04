@@ -7,7 +7,7 @@
 {% block content %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
 
-    <div id="main-carousel" class="carousel slide carousel-fade w-100" data-bs-ride="carousel">
+    <section id="main-carousel" class="carousel slide carousel-fade w-100" data-bs-ride="carousel">
         <div class="carousel-inner w-100 h-100">
             {% for image in slider.images.all %}
                 <div class="carousel-item h-100 {% if forloop.first %}active{% endif %}">
@@ -39,20 +39,29 @@
         <a role="button" class="position-absolute scroll-down d-none d-lg-block z-1 p-3 text-light">
             <i class="fa fa-chevron-down fa-bounce" aria-hidden="true"></i>
         </a>
-    </div>
+    </section>
 
-    <section id="counter-section" class="w-100 py-3 py-md-5">
-        <div class="counter-container container-md m-0 mx-auto p-3 row row-cols-1 row-cols-sm-3">
-            <div class="col m-0 px-2 d-flex flex-row flex-sm-column justify-content-center align-items-center gap-2 ">
-                <h1 id="student-counter" class="counter-number text-yellow m-0">0</span>
+    <section id="counter-section" class="w-100 py-0 py-sm-5">
+        <div class="counter-container container-md m-0 mx-auto p-3 py-3 py-md-5 row row-cols-1 row-cols-sm-3 text-dark bg-yellow">
+            <div class="col m-0 px-2 d-flex flex-column justify-content-center align-items-center gap-2 ">
+                <div class="icon-container">
+                    <i class="fa fa-calendar fa-6x d-none d-md-block" aria-hidden="true"></i>
+                </div>
+                <h1 id="student-counter" class="counter-number m-0">0</span>
                 <h5 class="counter-subtitle m-0">{% translate 'Ученици' %}</span>
             </div>
-            <div class="col m-0 px-2 d-flex flex-row flex-sm-column justify-content-center align-items-center gap-2 ">
-                <h1 id="professor-counter" class="counter-number text-yellow m-0">0</span>
+            <div class="col m-0 px-2 d-flex flex-column justify-content-center align-items-center gap-2 ">
+                <div class="icon-container">
+                    <i class="fas fa-chalkboard-teacher fa-6x d-none d-md-block"></i>
+                </div>
+                <h1 id="professor-counter" class="counter-number m-0">0</span>
                 <h5 class="counter-subtitle m-0">{% translate 'Професори' %}</span>
             </div>
-            <div class="col m-0 px-2 d-flex flex-row flex-sm-column justify-content-center align-items-center gap-2 ">
-                <h1 id="years-counter" class="counter-number text-yellow m-0">0</span>
+            <div class="col m-0 px-2 d-flex flex-column justify-content-center align-items-center gap-2 ">
+                <div class="icon-container">
+                    <i class="fas fa-people-group fa-6x d-none d-md-block"></i>
+                </div>
+                <h1 id="years-counter" class="counter-number m-0">0</span>
                 <h5 class="counter-subtitle m-0">{% translate 'Години' %}</span>
             </div>
         </div>
@@ -88,9 +97,9 @@
         let counterHasStarted = false;
         const initiateCounters = () => {
             if(window.scrollY >= counterContainer.offsetTop - window.innerHeight + 200 && !counterHasStarted) {
-                counter("years-counter", 0, 11, 2500);
-                counter("student-counter", 100, 350, 2500);
-                counter("professor-counter", 0, 18, 2500);
+                counter("years-counter", 0, 11, 2000);
+                counter("student-counter", 100, 350, 2000);
+                counter("professor-counter", 0, 18, 2000);
 
                 counterHasStarted = true;
             };

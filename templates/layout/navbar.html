@@ -20,7 +20,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a href="" class="nav-link px-2 dropdown-toggle" role="button" data-bs-toggle="dropdown">{% translate 'Прилози' %}</a>
-                    <ul class="dropdown-menu rounded-0 bg-light-green dropdown-shadow py-0">
+                    <ul class="dropdown-menu rounded-0 bg-light-green dropdown-shadow py-0 border-0 border-top border-3 border-warning">
                         <li>
                             <a href="{% url 'attachments' %}#documents" class="nav-link dropdown-item bg-light-green py-1 text-center text-lg-start">{% translate 'Документи' %}</a>
                         </li>
@@ -43,7 +43,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a href="" class="nav-link px-2 dropdown-toggle" role="button" data-bs-toggle="dropdown">{% translate 'Матура' %}</a>
-                    <ul class="dropdown-menu rounded-0 bg-light-green dropdown-shadow py-0">
+                    <ul class="dropdown-menu rounded-0 bg-light-green dropdown-shadow py-0 border-0 border-top border-3 border-warning">
                         <li>
                             <a href="{% url 'curriculum' %}#matura-exam" class="nav-link dropdown-item bg-light-green py-1 text-center text-lg-start">{% translate 'Државна матура' %}</a>
                         </li>
@@ -71,7 +71,7 @@
                     <a href="" class="nav-link dropdown-toggle px-2" role="button" data-bs-toggle="dropdown">
                         <i class="fa fa-globe"></i>
                     </a>
-                    <ul class="dropdown-menu language-dropdown py-0 mb-2 rounded-0 bg-light-green dropdown-shadow">
+                    <ul class="dropdown-menu language-dropdown py-0 mb-2 rounded-0 bg-light-green dropdown-shadow border-0 border-top border-3 border-warning">
                         <li>
                             <form class="w-100 pt-1 px-2 d-flex justify-content-center justify-content-lg-start" method="post" action="{% url 'set_language' %}">
                                 {% csrf_token %}

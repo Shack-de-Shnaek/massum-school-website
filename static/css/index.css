@@ -22,7 +22,7 @@
 }
 
 .counter-number {
-    font-size: clamp(2rem, 5vw, 6rem);
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
 }
 
 @media screen and (max-width: 992px) {
