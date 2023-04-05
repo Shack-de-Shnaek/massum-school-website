@@ -82,7 +82,7 @@ class GalleryCategory(models.Model):
 class GalleryImage(models.Model):
     category = models.ForeignKey(GalleryCategory, blank=False, null=False, on_delete=models.RESTRICT, related_name='images', verbose_name=_('Категорија'))
     image = models.ImageField(blank=False, null=False, verbose_name=_('Слика'))
-    title = models.CharField(max_length=50, blank=True, null=True, verbose_name=_('Наслов'))
+    title = models.CharField(max_length=150, blank=True, null=True, verbose_name=_('Наслов'))
 
     def __str__(self):
         if self.title: return self.title
