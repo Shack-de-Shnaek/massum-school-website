@@ -2,6 +2,7 @@
 	color: var(--bs-light);
 	background: var(--light-green);
 	transition: 0.2s;
+	font-size: 0.8rem;
 }
 
 .btn-attachment:hover, .btn-attachment:focus {

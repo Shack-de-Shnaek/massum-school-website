@@ -16,10 +16,10 @@
             
                 {% for attachment in category.attachments.all %}
                     <div class="bg-primary-green p-3 w-100">
-                        <p class="d-flex justify-content-xl-center text-light">{{ attachment.name }}</p>
+                        <p class="mb-1 d-flex justify-content-xl-center text-light">{{ attachment.name }}</p>
                 
                         <div class="d-flex justify-content-center ">
-                            <a class="btn btn-attachment rounded-0" href="/media/{{ attachment.file }}">{% translate 'Превземи' %}</a>
+                            <a class="btn btn-attachment p-1 rounded-0" href="/media/{{ attachment.file }}">{% translate 'Превземи' %}</a>
                         </div>
                     </div>
                 {% endfor %}
