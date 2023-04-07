@@ -103,7 +103,7 @@ def attachments(request: HttpRequest):
         'attachment_categories': attachment_categories
     })
 
-def curriculum(request: HttpRequest):
+def matura(request: HttpRequest):
     attachment_categories = AttachmentCategory.objects.prefetch_related('attachments').filter(name_slug__in=(
         'matura-exam',
         'graduation-exam',

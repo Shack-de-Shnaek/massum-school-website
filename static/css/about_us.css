@@ -27,6 +27,15 @@
     opacity: 75% !important;
 }
 
+.school-card-row {
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.school-card-row:nth-child(2n) {
+    background-color: var(--bs-gray-100);
+}
+
 @media screen and (max-width: 767px) {
     .accordion-collapse {
         position: static !important;

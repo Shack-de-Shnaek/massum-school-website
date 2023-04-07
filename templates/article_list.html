@@ -13,19 +13,19 @@
     <section class="container-sm p-3 px-2 px-md-5 d-flex flex-column align-items-center gap-3">
         <h2 class="section-header text-light-green">{% translate 'Новости' %}</h1>
         
-        <form id="article-filter-form" class="w-100 row gy-2">
-            <label class="col-12 col-lg-4 d-flex gap-2 align-items-center">
+        <form id="article-filter-form" class="w-100 px-3 pt-3 row gy-2 align-items-center">
+            <label class="m-0 py-1 col-12 col-lg-3 d-flex gap-2 align-items-center">
                 <span class="m-0">{% translate "Месец" %}</span>
-                <input class="d-inline-block form-control rounded-0" type="month" name="time" value="{{ request.GET.time }}">
+                <input class="d-inline-block form-control rounded-1" type="month" name="time" value="{{ request.GET.time }}">
             </label>
-            <label class="col-12 col-lg-4 d-flex gap-2 align-items-center">
+            <label class="m-0 py-1 col-12 col-lg-7 d-flex gap-2 align-items-center">
                 <span class="m-0">{% translate "Текст" %}</span>
-                <input class="d-inline-block form-control rounded-0" type="search" name="search" value="{{ request.GET.search }}">
+                <input class="d-inline-block form-control rounded-1" type="search" name="search" value="{{ request.GET.search }}">
             </label>
 
-            <div class="col-12 col-lg-4 d-flex gap-2 align-items-center">
-                <button class="btn btn-primary p-1 rounded-0" type="submit">{% translate "Барај" %}</button>
-                <button class="btn btn-danger p-1 rounded-0" type="reset" onclick="this.form.submit()">{% translate "Ресетирај" %}</button>
+            <div class="m-0 py-1 px-0 col-12 col-lg-2 d-flex gap-2 align-items-center justify-content-center justify-content-lg-start">
+                <button class="btn btn-success p-1 rounded-1" type="submit">{% translate "Барај" %}</button>
+                <button class="btn btn-danger p-1 rounded-1" type="reset" onclick="this.form.submit()">{% translate "Ресетирај" %}</button>
             </div>
         </form>
         {% if articles.count > 0 %}

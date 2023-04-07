@@ -10,7 +10,7 @@
     <section class="pt-5 container-xl">
       	<h2 class="section-header mx-auto text-light-green">{% translate 'ВИЗИЈА, МИСИЈА, ЦЕЛИ и РЕСУРСИ на училиштето' %}</h2>
 		
-		<div class="mission-vision-goals pt-4 row row-cols-1 row-cols-lg-3 g-3 g-xl-5">
+		<div class="mission-vision-goals pt-4 row row-cols-1 row-cols-lg-3 g-2 g-lg-3 g-xl-5">
 			<div class="col">
 				<div class="shadow p-3">
 					<h3 class="d-flex flex-column align-items-center gap-1">
@@ -82,6 +82,90 @@
 				</li>
 			{% endfor %}
 		</ul>
+	</section>
+
+	<section id="school-history" class="container-lg pt-5">
+		<h2 class="section-header mx-auto text-light-green">{% translate 'Историја на училиштето' %}</h2>
+		
+		<div class="py-5 px-2 row row-cols-1 row-cols-lg-2 g-2">
+			<div class="m-0 col px-3 ps-lg-0 pe-lg-5">
+				<div class="py-2">
+					<p>{% trans "Основач на Средното општинско стручно училиште „Илинден“ е Општина Илинден." %}</p>
+					<p>{% trans "Општина Илинден се наоѓa на 10 км оддалеченост од главниот град Скопје. Го зафаќа источниот дел на Скопската котлина, на тромеѓето Скопје-Куманово – Велес .Општина Илинден се граничи со Општините Гази Баба, Арачиново, Куманово и Петровец. Според пописот на населението од 2002 година, вкупниот број жители во Општина Илинден изнесува 15.894, кои живеат во 4.298 домаќинства или, просечно по 3,7 членови во домаќинство. Густината на населеност изнесува 150 жители/km2." %}</p>
+					<p>{% trans "Во состав на Општина Илинден влегуваат 12 (дванаесет) населени места и тоа: Илинден, Марино, Кадино, Мралино, Ајватовци, Бунарџик, Миладиновци, Бујковци, Мршевци, Бучинци, Текија и Дељадровци." %}</p>
+				</div>
+				<div class="py-2">
+					<p>{% trans "Поаѓајќи од фактот дека образованието е еден од клучните двигатели на процесите во едно општество, Градоначалникот на Општина Илинден, господинот Жика Стојановски и Советот на Општина Илинден го основаа Средното општинско стручно училиште „Илинден“ – Илинден." %}</p>
+					<p>{% trans "Со основањето на средното електротехничко училиште „Илинден“ во општина Илинден се овозможи дел од учениците од основните училишта „Гоце Делчев“, „Браќа Миладиновци“ и „Ристо Крле“ да го продолжат средното образование во општина Илинден. На тој начин се скрати времето потребно за патување на учениците, се обезбеди подобрување на условите за престој на учениците средношколци и подобрување на образовниот процес во општината." %}</p>
+					<p>{% trans "Се разбира, училишните врати се отворени и за сите ученици кои доаѓаат од другите општини." %}</p>
+				</div>
+			</div>
+	
+			<div class="col">
+				<div class="border border-1 shadow">
+					<h4 class="p-3 text-center text-light bg-yellow">{% trans "Лична карта на училиштетот" %}</h4>
+					<div class="school-card-body">
+						<div class="school-card-row">
+							<strong>{% translate 'Име на училиштето' %}</strong>
+							<span>{% translate 'Средно општинско стручно училиште “Илинден”' %}</span>
+						</div>
+						<div class="school-card-row">
+							<strong>{% translate 'Адреса, општина, место' %}</strong>
+							<span>{% translate 'улица “534” бр. 29 Марино, Илинден' %}</span>
+						</div>
+						<div class="school-card-row">
+							<strong>{% translate 'Телефон' %}</strong>
+							<span>02/ 2 552-320; 02/ 2 566-111; (070) 83 00 92</span>
+						</div>
+						<div class="school-card-row">
+							<strong>{% translate 'Е-маил' %}</strong>
+							<span>suilinden@yahoo.com</span>
+						</div>
+						<div class="school-card-row">
+							<strong>{% translate 'Основано од' %}</strong>
+							<span>{% translate 'Општина Илинде' %}</span>
+						</div>
+						<div class="school-card-row">
+							<strong>{% translate 'Верификација- број на актот' %}</strong>
+							<span>11-1361/4</span>
+						</div>
+						<div class="school-card-row">
+							<strong>{% translate 'Година на верификација' %}</strong>
+							<span>13.03.2013</span>
+						</div>
+						<div class="school-card-row">
+							<strong>{% translate 'Јазик на кој се изведува наставата' %}</strong>
+							<span>{% translate 'Македонски' %}</span>
+						</div>
+						<div class="school-card-row">
+							<strong>{% translate 'Година на изградба' %}</strong>
+							<span>2011/2012</span>
+						</div>
+						<div class="school-card-row">
+							<strong>{% translate 'Тип на градба' %}</strong>
+							<span>{% translate 'Модуларен систем на градба' %}</span>
+						</div>
+						<div class="school-card-row">
+							<strong>{% translate 'Површена на објектот' %}</strong>
+							<span>2.279.84 m<sup>2</sup></span>
+						</div>
+						<div class="school-card-row">
+							<strong>{% translate 'Површина на училшниот двор' %}</strong>
+							<span>6.500 m<sup>2</sup></span>
+						</div>
+						<div class="school-card-row">
+							<strong>{% translate 'Површина на спортски терени и игралишта' %}</strong>
+							<span>{% translate 'Општинска спортска сала и отворени тениски игралишта' %}</span>
+						</div>
+						<div class="school-card-row">
+							<strong>{% translate 'Начин на загревање на училиштето' %}</strong>
+							<span>{% translate 'Геотермални води' %}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
 	</section>
 
     <section class="mt-5 bottom-map">

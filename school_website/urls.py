@@ -36,7 +36,7 @@ urlpatterns += i18n_patterns(
     path('articles/<int:article_id>', views.article, name='article'),
     path('contact/', views.contact, name='contact'),
     path('attachments/', views.attachments, name='attachments'),
-    path('curriculum/', views.curriculum, name='curriculum'),
+    path('matura/', views.matura, name='matura'),
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
