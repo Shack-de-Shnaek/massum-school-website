@@ -97,7 +97,7 @@ class Employee(models.Model):
     image = models.ImageField(blank=False, null=False, verbose_name=_('Слика'))
     title = models.CharField(max_length=20, blank=False, null=False, verbose_name=_('Титула'))
     email = models.EmailField(blank=False, null=False, verbose_name=_('Емаил'))
-    subjects = models.ManyToManyField('Subject', related_name='subjects', null=True, blank=True, verbose_name=_('Предмети'))
+    subjects = models.ManyToManyField('Subject', related_name='subjects', blank=True, verbose_name=_('Предмети'))
 
     def __str__(self):
         return self.full_name
@@ -131,7 +131,7 @@ class ContactFormMessage(models.Model):
         verbose_name_plural = _('Пораки')
 
 class AttachmentCategory(models.Model):
-    name = models.CharField(max_length=100, blank=False, null=False, verbose_name=_('Име'))
+    name = models.CharField(max_length=200, blank=False, null=False, verbose_name=_('Име'))
     name_slug = models.SlugField(max_length=100, blank=False, null=False, unique=True, verbose_name=_('Име слаг'))
 
     def __str__(self):
