@@ -8,5 +8,5 @@ td, th {
 }
 
 .table-wrapper {
-    overflow-x: scroll;
+    overflow-x: auto;
 }
