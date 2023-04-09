@@ -41,6 +41,29 @@
         </a>
     </section>
 
+    <section id="link-section" class="w-100 p-1">
+        <div class="counter-container container-md  mx-auto p-0 p-md-2 " style="border-style: solid; border-color: #4ABF85; border-width: 5px;">
+            <div class="bg-light-green p-3 d-flex flex-row flex-wrap justify-content-evenly gap-5 text-dark align-items-center">
+                <div class="d-flex flex-column align-items-center">
+                    <a href="{% url 'gallery' %}" class="text-dark"><i class="fa-regular fa-image"></i></a>
+                    <a href="{% url 'gallery' %}" class="text-dark">{% translate 'Галерија' %}</a>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <a href="{% url 'curriculum' %}" class="text-dark"><i class="fa-solid fa-graduation-cap"></i></a>
+                    <a href="{% url 'curriculum' %}" class="text-dark">{% translate 'Настава' %}</a>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <a href="{% url 'about_us' %}" class="text-dark"><i class="fa-solid fa-users"></i></a>
+                    <a href="{% url 'about_us' %}" class="text-dark">{% translate 'За нас' %}</a>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <a href="{% url 'contact' %}" class="text-dark"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="{% url 'contact' %}" class="text-dark">{% translate 'Контакт' %}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section id="counter-section" class="w-100 py-0 py-sm-5">
         <div class="counter-container container-md  mx-auto p-0 p-md-2 border border-5 border-warning">
             <div class="row row-cols-1 row-cols-sm-3 w-100 m-0 p-3 py-md-5 text-dark bg-yellow">

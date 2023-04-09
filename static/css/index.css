@@ -25,6 +25,10 @@
     font-size: clamp(2.5rem, 4vw, 4.5rem);
 }
 
+#link-section svg {
+    font-size: 8rem;
+}
+
 @media screen and (max-width: 992px) {
     #main-carousel {
         min-height: 25vh;
