@@ -41,25 +41,25 @@
         </a>
     </section>
 
-    <section id="link-section" class="w-100 p-1">
-        <div class="counter-container container-md  mx-auto p-0 p-md-2 " style="border-style: solid; border-color: #4ABF85; border-width: 5px;">
-            <div class="bg-light-green p-3 d-flex flex-row flex-wrap justify-content-evenly gap-5 text-dark align-items-center">
-                <div class="d-flex flex-column align-items-center">
-                    <a href="{% url 'gallery' %}" class="text-dark"><i class="fa-regular fa-image"></i></a>
-                    <a href="{% url 'gallery' %}" class="text-dark">{% translate 'Галерија' %}</a>
-                </div>
-                <div class="d-flex flex-column align-items-center">
-                    <a href="{% url 'curriculum' %}" class="text-dark"><i class="fa-solid fa-graduation-cap"></i></a>
-                    <a href="{% url 'curriculum' %}" class="text-dark">{% translate 'Настава' %}</a>
-                </div>
-                <div class="d-flex flex-column align-items-center">
-                    <a href="{% url 'about_us' %}" class="text-dark"><i class="fa-solid fa-users"></i></a>
-                    <a href="{% url 'about_us' %}" class="text-dark">{% translate 'За нас' %}</a>
-                </div>
-                <div class="d-flex flex-column align-items-center">
-                    <a href="{% url 'contact' %}" class="text-dark"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="{% url 'contact' %}" class="text-dark">{% translate 'Контакт' %}</a>
-                </div>
+    <section id="link-section" class="container-fluid m-0 p-0 px-lg-3 pt-0 pt-md-3">
+        <div class="w-100 p-0 p-md-2 ">
+            <div class="w-100 row row-cols-1 row-cols-sm-2 row-cols-md-4 m-0 p-3 bg-light-green text-dark">
+                <a href="{% url 'gallery' %}" class="col d-flex flex-column align-items-center text-dark text-hover-gray">
+                    <i class="fa-regular fa-image"></i>
+                    <h5>{% translate 'Галерија' %}</h5>
+                </a>
+                <a href="{% url 'curriculum' %}" class="col d-flex flex-column align-items-center text-dark text-hover-gray">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h5>{% translate 'Настава' %}</h5>
+                </a>
+                <a href="{% url 'about_us' %}" class="col d-flex flex-column align-items-center text-dark text-hover-gray">
+                    <i class="fa-solid fa-users"></i>
+                    <h5>{% translate 'За нас' %}</h5>
+                </a>
+                <a href="{% url 'contact' %}" class="col d-flex flex-column align-items-center text-dark text-hover-gray">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h5>{% translate 'Контакт' %}</h5>
+                </a>
             </div>
         </div>
     </section>
@@ -108,10 +108,12 @@
         </div>
     </section>
 
-    <section class="mt-5 bottom-map">
-        <div class="video-container py-4 px-3 px-lg-5 d-flex flex-column flex-lg-row align-items-center gap-3 bg-light-green">
-            <iframe class="w-100 ratio-16x9" width="560" height="315" src="https://www.youtube.com/embed/YB21IjUsAhk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-            <p class="w-100 text-light">{% translate 'СОСУ „ИЛИНДЕН“ го гледаме како современо, европско училиште полно со професионализам, креативност и сигурен развој кон најелитните училишта за оспособување на кадар од електротехничка струка.' %}</p>
+    <section class="w-100 mt-5 bottom-map">
+        <div class="w-100 video-container row m-0 py-4 px-3 px-lg-5 bg-light-green">
+            <div class="col-12 col-md-8 col-xl-6">
+                <iframe class="ratio-16x9 w-100" height="360" src="https://www.youtube.com/embed/YB21IjUsAhk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+            </div>
+            <p class="col-12 col-md-4 text-light">{% translate 'СОСУ „ИЛИНДЕН“ го гледаме како современо, европско училиште полно со професионализам, креативност и сигурен развој кон најелитните училишта за оспособување на кадар од електротехничка струка.' %}</p>
         </div>
         <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.0775546549135!2d21.58139251568422!3d41.98931326642568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135438daccb390ed%3A0xa2544433bb236be9!2z0KHQntCh0KMgItCY0LvQuNC90LTQtdC9Ig!5e1!3m2!1sen!2smk!4v1646334169948!5m2!1sen!2smk" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
     </section>

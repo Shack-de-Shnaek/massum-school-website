@@ -97,7 +97,7 @@ def attachments(request: HttpRequest):
         'public-acquisition',
         'documents',
         'brochure-for-parents',
-    )).order_by('id')
+    ))
 
     return render(request, 'attachments.html', {
         'attachment_categories': attachment_categories

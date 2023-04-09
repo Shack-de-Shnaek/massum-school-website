@@ -11,7 +11,7 @@
 }
 
 .video-container > * {
-    max-width: 40rem;
+    /* max-width: 40rem; */
 }
 
 .scroll-down {
@@ -26,7 +26,11 @@
 }
 
 #link-section svg {
-    font-size: 8rem;
+    font-size: clamp(3rem, 10vw, 7.5rem);
+}
+
+#link-section > div {
+    border-style: solid; border-color: #4ABF85; border-width: 5px;
 }
 
 @media screen and (max-width: 992px) {
