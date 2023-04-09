@@ -171,10 +171,6 @@ footer a {
     transition: 0.2s;
 }
 
-footer a:hover {
-    color: var(--yellow) !important;
-}
-
 footer .icon {
     width: 25px;
     height: 25px;

@@ -8,26 +8,26 @@
       </span>
 
       <div class="d-flex gap-2">
-         <a href="{% url 'index' %}" class="footer-nav text-light">{% translate 'Почетна' %}</a>
-         <a href="{% url 'about_us' %}" class="footer-nav text-light">{% translate 'За Нас' %}</a>
-         <a href="{% url 'contact' %}" class="footer-nav text-light">{% translate 'Контакт' %}</a>
-         <a href="{% url 'article_list' %}" class="footer-nav text-light">{% translate 'Новости' %}</a>
+         <a href="{% url 'index' %}" class="footer-nav text-light text-hover-yellow">{% translate 'Почетна' %}</a>
+         <a href="{% url 'about_us' %}" class="footer-nav text-light text-hover-yellow">{% translate 'За Нас' %}</a>
+         <a href="{% url 'contact' %}" class="footer-nav text-light text-hover-yellow">{% translate 'Контакт' %}</a>
+         <a href="{% url 'article_list' %}" class="footer-nav text-light text-hover-yellow">{% translate 'Новости' %}</a>
       </div>
    </div>
 
    <div class="col-12 col-lg-4 p-2 d-flex flex-column gap-2">
-      <div class="d-flex align-items-center gap-2">
-         <img src="{% static 'icons/location.png' %}" class="icon" alt="location_icon">
+      <div class="d-flex align-items-center gap-2 text-light text-hover-yellow">
+         <i class="fa fa-map-location-dot" aria-hidden="true"></i>
          <a href="https://www.google.com/maps/dir//sosu+ilinden/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x135438daccb390ed:0xa2544433bb236be9?sa=X&ved=2ahUKEwjLuJffv979AhUig_0HHVgJCCQQ9Rd6BAhMEAQ" class="text-light">Улица 534, бр.29, н.м Марино</a>
       </div>
       
-      <div class="d-flex align-items-center gap-2">
-         <img src="{% static 'icons/phone.png' %}" class="icon" alt="phone_icon">
+      <div class="d-flex align-items-center gap-2 text-light text-hover-yellow">
+         <i class="fa fa-phone" aria-hidden="true"></i>
          <a href="tel:022556111" class="text-light">02/ 2 556 111</a>
       </div>
 
-      <div  class="d-flex align-items-center gap-2">
-         <img src="{% static 'icons/email.png' %}" class="icon" alt="email_icon">
+      <div  class="d-flex align-items-center gap-2 text-light text-hover-yellow">
+         <i class="fa fa-envelope" aria-hidden="true"></i>
          <a href="mailto:suilinden@yahoo.com" class="text-light">suilinden@yahoo.com</a>
       </div>
    </div>

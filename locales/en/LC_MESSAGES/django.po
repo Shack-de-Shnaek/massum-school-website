@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-05 08:05+0000\n"
+"POT-Creation-Date: 2023-04-09 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,7 +35,7 @@ msgstr "Created at"
 msgid "Објава"
 msgstr "Article"
 
-#: main/models.py:17 templates/attachments.html:5
+#: main/models.py:17
 msgid "Објави"
 msgstr "Articles"
 
@@ -161,11 +161,12 @@ msgstr "Document categories"
 msgid "Прилог"
 msgstr "Document"
 
-#: main/models.py:155 templates/layout/navbar.html:22
+#: main/models.py:155 templates/attachments.html:5
+#: templates/layout/navbar.html:22
 msgid "Прилози"
 msgstr "Documents"
 
-#: school_website/settings.py:120
+#: school_website/settings.py:120 templates/about_us.html:138
 msgid "Македонски"
 msgstr "Macedonian"
 
@@ -252,9 +253,9 @@ msgid ""
 "во практиката, за творечко и одговорно однесување спрема работата, "
 "средината, општеството и спрема самите себе."
 msgstr ""
-"Let's educate professional staff trained to apply scientific achievements"
-"in practice, for creative and responsible behavior towards work,"
-"the environment, society and towards ourselves."
+"Let's educate professional staff trained to apply scientific achievementsin "
+"practice, for creative and responsible behavior towards work,the "
+"environment, society and towards ourselves."
 
 #: templates/about_us.html:42
 msgid "Цели на училиштето"
@@ -267,34 +268,34 @@ msgid ""
 "најквалитетни училишта кои не ги бараат учениците туку учениците сами "
 "избираат да се запишат и дообразуваат кај нас"
 msgstr ""
-"Creating a modern school that strives to provide a desirable image "
-"school by the students and thus to enter the ranks of those "
-"the best quality schools that are not looking for the students but the students themselves "
-"they choose to enroll and continue their education with us "
+"Creating a modern school that strives to provide a desirable image school by "
+"the students and thus to enter the ranks of those the best quality schools "
+"that are not looking for the students but the students themselves they "
+"choose to enroll and continue their education with us "
 
 #: templates/about_us.html:46
 msgid ""
 "Проширување на соработката со повеќе компании од стопанството и потпишување "
 "на Меморандуми за соработка"
 msgstr ""
-"Expanding cooperation with more companies from the economy and signing "
-"on Memorandums of Cooperation "
+"Expanding cooperation with more companies from the economy and signing on "
+"Memorandums of Cooperation "
 
 #: templates/about_us.html:47
 msgid ""
 "Обезбедување работна пракса за нашите ученици во компаниите со кои се "
 "потпишани Меморандумите за соработка"
 msgstr ""
-"Providing work practice for our students in the companies they work with "
-"the Memorandums of Cooperation signed"
+"Providing work practice for our students in the companies they work with the "
+"Memorandums of Cooperation signed"
 
 #: templates/about_us.html:48
 msgid ""
 "Поголема опфатеност на генерацијата што завршува основно образование во "
 "нашата општина и зголемување на бројот на паралелки и образовни профили"
 msgstr ""
-"Greater coverage of the generation that completes primary education in "
-"our municipality and increasing the number of classes and educational profiles "
+"Greater coverage of the generation that completes primary education in our "
+"municipality and increasing the number of classes and educational profiles "
 
 #: templates/about_us.html:49
 msgid "Континуирано промовирање на училиштето"
@@ -305,23 +306,179 @@ msgid ""
 "Опремување на кабинетите и лабораториите со најсовремена опрема, со нови "
 "наставни и нагледни средства"
 msgstr ""
+"Equipping the cabinets and laboratories with the most modern equipment, with new"
+"teaching and visual aids"
 
 #: templates/about_us.html:51
 msgid "Максимална употреба на ИКТ во наставата"
-msgstr ""
+msgstr "Maximum use of ICT in teaching"
 
 #: templates/about_us.html:71
-#, fuzzy
-#| msgid "Предмети"
 msgid "Предмети: "
-msgstr "Subjects"
+msgstr "Subjects: "
+
+#: templates/about_us.html:88
+msgid "Историја на училиштето"
+msgstr "History of the school"
+
+#: templates/about_us.html:93
+msgid ""
+"Основач на Средното општинско стручно училиште „Илинден“ е Општина Илинден."
+msgstr ""
+"The founder of the Secondary Municipal Vocational School Ilinden is the Municipality of Ilinden."
+
+#: templates/about_us.html:94
+msgid ""
+"Општина Илинден се наоѓa на 10 км оддалеченост од главниот град Скопје. Го "
+"зафаќа источниот дел на Скопската котлина, на тромеѓето Скопје-Куманово – "
+"Велес .Општина Илинден се граничи со Општините Гази Баба, Арачиново, "
+"Куманово и Петровец. Според пописот на населението од 2002 година, вкупниот "
+"број жители во Општина Илинден изнесува 15.894, кои живеат во 4.298 "
+"домаќинства или, просечно по 3,7 членови во домаќинство. Густината на "
+"населеност изнесува 150 жители/km2."
+msgstr ""
+"The municipality of Ilinden is located around 10km away from the capital city - Skopje. "
+"It occupies the eastern part of the Skopje valley, on the tri-border Skopje-Kumanovo-Veles."
+"The municipality of Ilinden borders the municipalities "
+" of Gazi Baba, Arachinovo, Kumanovo and Petrovets. "
+"According to the 2002 census, the total population of the municipality of Ilinden is around 15,894, residing in 4,298 "
+"households, or approximately 3.7 persons per household. "
+"The population density is around 150 inhabitants/km2. "
+
+#: templates/about_us.html:95
+msgid ""
+"Во состав на Општина Илинден влегуваат 12 (дванаесет) населени места и тоа: "
+"Илинден, Марино, Кадино, Мралино, Ајватовци, Бунарџик, Миладиновци, "
+"Бујковци, Мршевци, Бучинци, Текија и Дељадровци."
+msgstr ""
+"The Municipality of Ilinden includes 12 (twelve) settlements, namely: "
+"Ilinden, Marino, Kadino, Mralino, Ajvatovci, Bunardzik, Miladinovci, "
+"Bujkovci, Mrshevci, Buchinci, Tekia and Deljadrovci."
+
+#: templates/about_us.html:98
+msgid ""
+"Поаѓајќи од фактот дека образованието е еден од клучните двигатели на "
+"процесите во едно општество, Градоначалникот на Општина Илинден, господинот "
+"Жика Стојановски и Советот на Општина Илинден го основаа Средното општинско "
+"стручно училиште „Илинден“ – Илинден."
+msgstr ""
+"Starting from the fact that education is one of the key drivers of "
+"the processes in a society, the Mayor of the Municipality of Ilinden, Mr. "
+"Zhika Stojanovski and the Council of the Municipality of Ilinden founded the Middle Municipal Vocational school Ilinden."
+
+#: templates/about_us.html:99
+msgid ""
+"Со основањето на средното електротехничко училиште „Илинден“ во општина "
+"Илинден се овозможи дел од учениците од основните училишта „Гоце Делчев“, "
+"„Браќа Миладиновци“ и „Ристо Крле“ да го продолжат средното образование во "
+"општина Илинден. На тој начин се скрати времето потребно за патување на "
+"учениците, се обезбеди подобрување на условите за престој на учениците "
+"средношколци и подобрување на образовниот процес во општината."
+msgstr ""
+"The establishment of the secondary electrotechnical school Ilinden in the Municipality "
+"of Ilinden made it possible for some of the students from the primary schools Gotse Delchev, "
+"Miladinovtsi Brothers and Risto Krle to continue their education in the Municipality of Ilinden. "
+"With this, the students' commute time was reduced, improving the living conditions of middle school students "
+"living in the municipality. "
+
+#: templates/about_us.html:100
+msgid ""
+"Се разбира, училишните врати се отворени и за сите ученици кои доаѓаат од "
+"другите општини."
+msgstr ""
+"Of course, the school doors are also open to all students coming from "
+"other municipalities."
+
+#: templates/about_us.html:106
+msgid "Лична карта на училиштетот"
+msgstr "Our school's information card"
+
+#: templates/about_us.html:109
+msgid "Име на училиштето"
+msgstr "Name of the school"
+
+#: templates/about_us.html:110
+msgid "Средно општинско стручно училиште “Илинден”"
+msgstr "Secondary Municipal Vocational School Ilinden"
+
+#: templates/about_us.html:113
+msgid "Адреса, општина, место"
+msgstr "Address, municipality, place"
+
+#: templates/about_us.html:114
+msgid "улица “534” бр. 29 Марино, Илинден"
+msgstr "street 534 no. 29 Marino, Ilinden"
+
+#: templates/about_us.html:117
+msgid "Телефон"
+msgstr "Telephone"
+
+#: templates/about_us.html:121
+msgid "Е-маил"
+msgstr "Email"
+
+#: templates/about_us.html:125
+msgid "Основано од"
+msgstr "Founded on"
+
+#: templates/about_us.html:126
+msgid "Општина Илинден"
+msgstr "Municipality of Ilinden"
+
+#: templates/about_us.html:129
+msgid "Верификација- број на актот"
+msgstr "Verification - act number"
+
+#: templates/about_us.html:133
+msgid "Година на верификација"
+msgstr "Year of verification"
+
+#: templates/about_us.html:137
+msgid "Јазик на кој се изведува наставата"
+msgstr "Language of instruction"
+
+#: templates/about_us.html:141
+msgid "Година на изградба"
+msgstr "Year of construction"
+
+#: templates/about_us.html:145
+msgid "Тип на градба"
+msgstr "Type of construction"
+
+#: templates/about_us.html:146
+msgid "Модуларен систем на градба"
+msgstr "Modular construction system"
+
+#: templates/about_us.html:149
+msgid "Површена на објектот"
+msgstr "Surface area of the building"
+
+#: templates/about_us.html:153
+msgid "Површина на училшниот двор"
+msgstr "Surface area of the schoolyard"
+
+#: templates/about_us.html:157
+msgid "Површина на спортски терени и игралишта"
+msgstr "Surface area of sports fields and playgrounds"
+
+#: templates/about_us.html:158
+msgid "Општинска спортска сала и отворени тениски игралишта"
+msgstr "Municipal sports hall and outdoor tennis courts"
+
+#: templates/about_us.html:161
+msgid "Начин на загревање на училиштето"
+msgstr "Method of heating the school"
+
+#: templates/about_us.html:162
+msgid "Геотермални води"
+msgstr "Geothermal waters"
 
 #: templates/article.html:14
 msgid "Објавено на "
 msgstr "Published on "
 
 #: templates/article_list.html:7 templates/article_list.html:14
-#: templates/index.html:74 templates/layout/footer.html:14
+#: templates/index.html:97 templates/layout/footer.html:14
 #: templates/layout/navbar.html:16
 msgid "Новости"
 msgstr "News"
@@ -342,12 +499,12 @@ msgstr "Reset"
 msgid "Нема објави според Вашите критериуми"
 msgstr "There are no articles based on your criteria"
 
-#: templates/attachments.html:22 templates/student_information.html:22
+#: templates/attachments.html:23 templates/student_information.html:23
 msgid "Превземи"
 msgstr "Download"
 
-#: templates/contact.html:5 templates/layout/footer.html:13
-#: templates/layout/navbar.html:68
+#: templates/contact.html:5 templates/index.html:61
+#: templates/layout/footer.html:13 templates/layout/navbar.html:68
 msgid "Контакт"
 msgstr "Contact"
 
@@ -367,10 +524,10 @@ msgstr "The message was sent successfully."
 msgid "Испрати"
 msgstr "Send"
 
-#: templates/curriculum.html:5 templates/gallery.html:5
-#: templates/layout/navbar.html:19
-msgid "Галерија"
-msgstr "Gallery"
+#: templates/curriculum.html:5 templates/index.html:53
+#: templates/layout/navbar.html:42
+msgid "Настава"
+msgstr "Curriculum"
 
 #: templates/curriculum.html:12
 msgid "Образовен профил: ЕЛЕКТРОТЕХНИЧАР ЗА ЕЛЕКТРОНИКА И ТЕЛЕКОМУНИКАЦИЈА"
@@ -588,6 +745,11 @@ msgstr "Code of conduct"
 msgid "Дигитални системи\t"
 msgstr "Mandatory activities"
 
+#: templates/gallery.html:5 templates/index.html:49
+#: templates/layout/navbar.html:19
+msgid "Галерија"
+msgstr "Gallery"
+
 #: templates/gallery.html:13
 msgid "Сите"
 msgstr "All"
@@ -596,19 +758,27 @@ msgstr "All"
 msgid "СОСУ „ИЛИНДЕН“"
 msgstr "SOSU \"ILINDEN\""
 
-#: templates/index.html:52
+#: templates/index.html:57 templates/layout/navbar.html:65
+msgid "За нас"
+msgstr "About us"
+
+#: templates/index.html:75
 msgid "Ученици"
-msgstr ""
+msgstr "Students"
 
-#: templates/index.html:59
+#: templates/index.html:82
 msgid "Професори"
-msgstr ""
+msgstr "Professors"
 
-#: templates/index.html:66
+#: templates/index.html:89
 msgid "Години"
-msgstr ""
+msgstr "Years"
 
-#: templates/index.html:88
+#: templates/index.html:107
+msgid "Видете повеќе"
+msgstr "See more"
+
+#: templates/index.html:116
 msgid ""
 "СОСУ „ИЛИНДЕН“ го гледаме како современо, европско училиште полно со "
 "професионализам, креативност и сигурен развој кон најелитните училишта за "
@@ -660,92 +830,26 @@ msgstr "Public acqusition"
 msgid "Самоевалуација"
 msgstr "Self-evaluation"
 
-#: templates/layout/navbar.html:42
-msgid "Настава"
-msgstr "Curriculum"
-
 #: templates/layout/navbar.html:45
 msgid "Матура"
 msgstr "Matura"
 
 #: templates/layout/navbar.html:48
 msgid "Државна матура"
-msgstr ""
+msgstr "Matura exam"
 
 #: templates/layout/navbar.html:52
-#, fuzzy
-#| msgid "Завршна сметка"
 msgid "Завршен испит"
-msgstr "Final bill"
+msgstr "Graduation exam"
 
 #: templates/layout/navbar.html:56
 msgid "Проектна задача"
-msgstr ""
+msgstr "Graduation project"
 
 #: templates/layout/navbar.html:60
 msgid "Испитни прашања"
-msgstr ""
-
-#: templates/layout/navbar.html:65
-msgid "За нас"
-msgstr "About us"
+msgstr "Exam questions"
 
 #: templates/student_information.html:5
 msgid "Информации за ученици"
 msgstr "Information for students"
-
-#~ msgid ""
-#~ "\n"
-#~ "                        – Создавање на модерно училиште кое се стреми да "
-#~ "обезбеди имиџ на посакувано училиште од страна на учениците и на тој "
-#~ "начин да влезе во редот на оние најквалитетни училишта кои не ги бараат "
-#~ "учениците туку учениците сами избираат да се запишат и дообразуваат кај "
-#~ "нас<br><br>\n"
-#~ "            \n"
-#~ "                        – Проширување на соработката со повеќе компании "
-#~ "од стопанството и потпишување на Меморандуми за соработка<br><br>\n"
-#~ "                        \n"
-#~ "                        – Обезбедување работна пракса за нашите ученици "
-#~ "во компаниите со кои се потпишани Меморандумите за соработка<br><br>\n"
-#~ "                        \n"
-#~ "                        – Поголема опфатеност на генерацијата што "
-#~ "завршува основно образование во нашата општина и зголемување на бројот на "
-#~ "паралелки и образовни профили<br><br>\n"
-#~ "                        \n"
-#~ "                        – Континуирано промовирање на училиштето<br><br>\n"
-#~ "                        \n"
-#~ "                        – Опремување на кабинетите и лабораториите со "
-#~ "најсовремена опрема, со нови наставни и нагледни средства<br><br>\n"
-#~ "                        \n"
-#~ "                        – Максимална употреба на ИКТ во наставата\n"
-#~ "                    "
-#~ msgstr ""
-#~ "\n"
-#~ " – Creation of a modern school that strives to provide an image of a "
-#~ "desirable school by students and thusto join the ranks of the best "
-#~ "quality schools that do not require studentsbut the students themselves "
-#~ "choose to enroll and continue their education with us<br><br>\n"
-#~ " \n"
-#~ " – Expanding cooperation with more companies than the economy and signing "
-#~ "of Memorandums of Cooperation<br><br>\n"
-#~ " \n"
-#~ " – Providing work practice for our students in the companies with which "
-#~ "the Memorandums of Cooperation have been signed<br><br>\n"
-#~ " \n"
-#~ " – Greater Coverage of the Ending Generation primary education in our "
-#~ "municipality and increasing the number of classes andeducation "
-#~ "profiles<br><br>\n"
-#~ " \n"
-#~ " – Continuous promotion of the school<br><br>\n"
-#~ " \n"
-#~ " – Equipping the cabinets and laboratories with state-of-the-art "
-#~ "equipment, with new teaching and visual aids<br><br>\n"
-#~ " \n"
-#~ " – Maximum use of ICT in teaching\n"
-#~ "\n"
-
-#~ msgid "Вонредни ученици"
-#~ msgstr "Part-time studnets"
-
-#~ msgid "Распоред на часови"
-#~ msgstr "Class schedule"
