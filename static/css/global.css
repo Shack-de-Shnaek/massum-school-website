@@ -20,6 +20,10 @@ a {
     color: var(--yellow) !important;
 }
 
+.w-fit {
+    width: fit-content;
+}
+
 main {
     min-height: calc(100vh - 12rem);
     margin-top: 4rem;
